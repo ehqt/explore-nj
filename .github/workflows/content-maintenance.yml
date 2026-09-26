@@ -1,0 +1,59 @@
+# Weekly housekeeping. Opens (or updates) GitHub issues instead of failing builds:
+# - broken source links
+# - approved entries due for re-checking (volatile every 6 months, others every 2 years)
+name: Content maintenance
+
+on:
+  schedule:
+    - cron: '0 13 * * 1' # Mondays, 13:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  maintenance:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+
+      - uses: actions/cache@v6
+        with:
+          path: .cache
+          key: link-check-${{ github.run_id }}
+          restore-keys: link-check-
+
+      - name: Check links
+        id: links
+        run: |
+          if npm run --silent check-links -- --report link-report.md; then
+            echo "broken=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "broken=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Open or update the broken-links issue
+        run: node scripts/sync-issue.ts "Broken source links" link-report.md ${{ steps.links.outputs.broken }}
+
+      - name: Find entries due for re-checking
+        id: due
+        run: |
+          npm run --silent validate > validate-report.txt || true
+          if grep -q '^Due for re-checking' validate-report.txt; then
+            { echo 'These approved entries are due for re-checking against their sources:'; echo; sed -n '/^Due for re-checking/,/^$/p' validate-report.txt | tail -n +2 | sed 's/^  /- /'; } > due-report.md
+            echo "due=true" >> "$GITHUB_OUTPUT"
+          else
+            echo 'Nothing is due for re-checking.' > due-report.md
+            echo "due=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Open or update the re-check issue
+        run: node scripts/sync-issue.ts "Entries due for re-checking" due-report.md ${{ steps.due.outputs.due }}
