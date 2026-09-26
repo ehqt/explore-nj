@@ -1,0 +1,21 @@
+{
+  "name": "explore-nj",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A map-centered guide to New Jersey's geography, history and culture for new residents.",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "maplibre-gl": "^6.11.2"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2",
+    "vite": "^8.3.1"
+  }
+}
