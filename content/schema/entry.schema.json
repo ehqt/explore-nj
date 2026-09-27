@@ -1,0 +1,177 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ehqt.github.io/explore-nj/schema/entry.schema.json",
+  "title": "Explore NJ content entry (frontmatter)",
+  "description": "Frontmatter at the top of every file in content/{places,features,topics,counties}/. The prose below the frontmatter is checked separately (citations, sections).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "kind", "name", "summary", "pillar", "sources", "review"],
+  "properties": {
+    "id": {
+      "description": "URL slug. Must match the file name without .md.",
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "kind": { "enum": ["place", "feature", "topic", "county"] },
+    "name": { "type": "string", "minLength": 2, "maxLength": 80 },
+    "summary": {
+      "description": "One sentence used in search results and link previews.",
+      "type": "string",
+      "minLength": 20,
+      "maxLength": 200
+    },
+    "pillar": {
+      "description": "Primary pillar: why a newcomer would care today. Sets pin color and icon.",
+      "$ref": "#/$defs/pillar"
+    },
+    "tags": {
+      "description": "Secondary pillars, shown in the panel and searchable.",
+      "type": "array",
+      "items": { "$ref": "#/$defs/pillar" },
+      "uniqueItems": true
+    },
+    "location": {
+      "description": "Places only. WGS84. CI checks it falls inside New Jersey's bounding box.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["lng", "lat"],
+      "properties": {
+        "lng": { "type": "number" },
+        "lat": { "type": "number" }
+      }
+    },
+    "geometry": {
+      "description": "Features only. File name in content/geometry/.",
+      "type": "string",
+      "pattern": "^[a-z0-9-]+\\.geojson$"
+    },
+    "geometry_source": {
+      "description": "Features only. The id of the source (in sources) the geometry came from.",
+      "type": "string"
+    },
+    "county_fips": {
+      "description": "Counties only. 5-digit Census FIPS code (NJ is 34).",
+      "type": "string",
+      "pattern": "^34\\d{3}$"
+    },
+    "related": {
+      "description": "Ids of other entries: 'see it here' links, places inside a feature, highlights of a county.",
+      "type": "array",
+      "items": { "type": "string" },
+      "uniqueItems": true
+    },
+    "open_to_public": {
+      "description": "Required true for a 'Worth a visit?' section.",
+      "type": "boolean"
+    },
+    "official_url": {
+      "description": "Official site for current hours, fees and access. We never state hours or prices ourselves.",
+      "type": "string",
+      "format": "uri"
+    },
+    "volatile": {
+      "description": "True for businesses, teams or anything likely to change. Re-checked every 6 months instead of every 2 years.",
+      "type": "boolean"
+    },
+    "hard_history": {
+      "description": "True for entries that need outside review under the style guide (Lenape, slavery, 1967 Newark, ...).",
+      "type": "boolean"
+    },
+    "photo": { "$ref": "#/$defs/photo" },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/source" }
+    },
+    "review": {
+      "description": "Review history, in order. Only entries whose last stage is 'approved' ship.",
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/reviewStage" }
+    }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "kind": { "const": "place" } } },
+      "then": { "required": ["location"], "properties": { "geometry": false, "county_fips": false } }
+    },
+    {
+      "if": { "properties": { "kind": { "const": "feature" } } },
+      "then": { "required": ["geometry", "geometry_source"], "properties": { "location": false, "county_fips": false } }
+    },
+    {
+      "if": { "properties": { "kind": { "const": "topic" } } },
+      "then": { "properties": { "location": false, "geometry": false, "county_fips": false } }
+    },
+    {
+      "if": { "properties": { "kind": { "const": "county" } } },
+      "then": { "required": ["county_fips"], "properties": { "location": false, "geometry": false } }
+    }
+  ],
+  "$defs": {
+    "pillar": { "enum": ["geography", "history", "culture"] },
+    "date": { "type": "string", "format": "date" },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "title", "publisher", "url", "accessed"],
+      "properties": {
+        "id": {
+          "description": "Short id cited in the prose as [@id].",
+          "type": "string",
+          "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+        },
+        "title": { "type": "string", "minLength": 2 },
+        "publisher": { "type": "string", "minLength": 2 },
+        "url": { "type": "string", "format": "uri", "pattern": "^https?://" },
+        "accessed": { "$ref": "#/$defs/date" },
+        "archive_url": {
+          "description": "Wayback Machine snapshot, kept as a backup if the page moves or changes.",
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://web\\.archive\\.org/"
+        },
+        "further_reading": {
+          "description": "True for books or pages listed for readers but not used to support a claim.",
+          "type": "boolean"
+        }
+      }
+    },
+    "photo": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["file", "alt", "author", "license", "license_url", "source_url", "modified"],
+      "properties": {
+        "file": {
+          "description": "File name in public/images/.",
+          "type": "string",
+          "pattern": "^[a-z0-9-]+\\.(jpg|jpeg|png|webp)$"
+        },
+        "alt": { "type": "string", "minLength": 10 },
+        "author": { "type": "string", "minLength": 1 },
+        "license": { "type": "string", "minLength": 2 },
+        "license_url": { "type": "string", "format": "uri" },
+        "source_url": {
+          "description": "The file's page on Wikimedia Commons.",
+          "type": "string",
+          "format": "uri"
+        },
+        "modified": {
+          "description": "What we changed, e.g. 'Resized'.",
+          "type": "string"
+        }
+      }
+    },
+    "reviewStage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["stage", "date", "by"],
+      "properties": {
+        "stage": { "enum": ["drafted", "source-checked", "second-pass", "approved"] },
+        "date": { "$ref": "#/$defs/date" },
+        "by": { "type": "string", "minLength": 2 },
+        "note": { "type": "string" }
+      }
+    }
+  }
+}
