@@ -28,6 +28,13 @@ Every push to `main` builds the site and publishes it to GitHub Pages via
 The basemap is [OpenFreeMap](https://openfreemap.org/) (Positron style): free, no API
 key, no cookies. MapLibre shows the required attribution automatically.
 
+## Boundaries
+
+County and municipal boundaries, 2020 populations and Wikipedia links are built by
+`npm run boundaries` from U.S. Census Bureau files (public domain) and Wikidata, and the
+results are committed in `public/data/boundaries/`. Rerun it when the Census publishes
+new boundaries; `npm run validate:boundaries` (also in CI) checks the files agree.
+
 ## Licenses
 
 Code: MIT. Written content: CC BY 4.0. Images keep their own licenses. See [LICENSE](LICENSE).

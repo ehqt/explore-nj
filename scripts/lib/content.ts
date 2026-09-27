@@ -7,10 +7,29 @@ import { fileURLToPath } from 'node:url';
 import { parse as parseYaml } from 'yaml';
 import { Ajv2020 } from 'ajv/dist/2020.js';
 import addFormatsModule from 'ajv-formats';
+import { featureAt, type PolygonFeature } from '../../src/lib/geo.ts';
 
 export const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 export const CONTENT_DIR = join(ROOT, 'content');
 const IMAGES_DIR = join(ROOT, 'public', 'images');
+const BOUNDARIES_DIR = join(ROOT, 'public', 'data', 'boundaries');
+
+interface Boundaries {
+  municipalities: PolygonFeature[];
+  towns: Record<string, { name: string; county: string }>;
+  counties: Record<string, { name: string }>;
+}
+
+/** The committed boundary data (see scripts/build-boundaries.ts), or null if it hasn't been built. */
+export function loadBoundaries(): Boundaries | null {
+  if (!existsSync(join(BOUNDARIES_DIR, 'municipalities.json'))) return null;
+  const read = (f: string) => JSON.parse(readFileSync(join(BOUNDARIES_DIR, f), 'utf8'));
+  return {
+    municipalities: read('municipalities.geojson').features,
+    towns: read('municipalities.json'),
+    counties: read('counties.json'),
+  };
+}
 
 export type Kind = 'place' | 'feature' | 'topic' | 'county';
 export type Pillar = 'geography' | 'history' | 'culture';
@@ -75,6 +94,7 @@ export interface Frontmatter {
   geometry?: string;
   geometry_source?: string;
   county_fips?: string;
+  municipalities?: string[];
   related?: string[];
   open_to_public?: boolean;
   official_url?: string;
@@ -104,6 +124,8 @@ export interface Entry {
   stage: Stage;
   approved: boolean;
   recheckDue: string;
+  /** Places: the municipalities (GEOIDs) the place is in, explicit or derived from its location. */
+  towns: string[];
 }
 
 export interface Problem {
@@ -335,7 +357,30 @@ export function loadContent(): LoadResult {
 
       const lastDate = meta.review[meta.review.length - 1].date;
       const recheckDue = addMonths(lastDate, meta.volatile ? RECHECK_MONTHS.volatile : RECHECK_MONTHS.stable);
-      entries.push({ file, meta, sections, stage, approved: stage === 'approved', recheckDue });
+      entries.push({ file, meta, sections, stage, approved: stage === 'approved', recheckDue, towns: meta.municipalities ?? [] });
+    }
+  }
+
+  // Where each place is. Places on a border or spanning towns list them explicitly.
+  const boundaries = loadBoundaries();
+  if (boundaries) {
+    for (const e of entries) {
+      for (const id of e.meta.municipalities ?? []) {
+        if (!boundaries.towns[id]) errors.push({ file: e.file, message: `municipality ${id} is not in the boundary data` });
+      }
+      if (e.meta.location && e.towns.length === 0) {
+        const town = featureAt([e.meta.location.lng, e.meta.location.lat], boundaries.municipalities);
+        if (town) e.towns = [town];
+        else {
+          errors.push({
+            file: e.file,
+            message: 'location is not inside any New Jersey municipality (in the water or across the state line?). List the town(s) in municipalities.',
+          });
+        }
+      }
+      if (e.meta.county_fips && !boundaries.counties[e.meta.county_fips]) {
+        errors.push({ file: e.file, message: `county_fips ${e.meta.county_fips} is not a New Jersey county` });
+      }
     }
   }
 
@@ -382,6 +427,7 @@ export function compileForApp(entries: Entry[]) {
         location: m.location ?? null,
         geometry: m.geometry ? loadGeometry(m.geometry).geometry : null,
         county_fips: m.county_fips ?? null,
+        municipalities: e.towns,
         related: m.related ?? [],
         official_url: m.official_url ?? null,
         photo: m.photo ?? null,

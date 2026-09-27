@@ -12,12 +12,15 @@
     "typecheck": "tsc --noEmit",
     "validate": "node scripts/validate-content.ts",
     "content": "node scripts/build-content.ts",
-    "check-links": "node scripts/check-links.ts"
+    "check-links": "node scripts/check-links.ts",
+    "boundaries": "node scripts/build-boundaries.ts",
+    "validate:boundaries": "node scripts/validate-boundaries.ts"
   },
   "dependencies": {
     "maplibre-gl": "^6.11.2"
   },
   "devDependencies": {
+    "@types/geojson": "^7946.0.16",
     "@types/node": "^26.6.3",
     "ajv": "^8.20.0",
     "ajv-formats": "^3.0.1",

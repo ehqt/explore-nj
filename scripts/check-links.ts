@@ -7,6 +7,7 @@
 
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
+import { SOURCES } from '../src/config.ts';
 import { loadContent, ROOT } from './lib/content.ts';
 
 const USER_AGENT = 'ExploreNJ-LinkCheck/1.0 (+https://github.com/ehqt/explore-nj)';
@@ -96,6 +97,9 @@ for (const e of entries) {
   add(e.meta.photo?.source_url, e.file);
   add(e.meta.photo?.license_url, e.file);
 }
+
+// Links the app itself shows on town and county cards.
+for (const url of Object.values(SOURCES)) add(url, 'src/config.ts');
 
 const cache = readCache();
 const now = new Date();
