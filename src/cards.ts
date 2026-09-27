@@ -1,7 +1,8 @@
 // Builds the HTML for panel cards. Every value from data is escaped first.
 
 import type { AppData, Entry, Source } from './data';
-import { distanceKm, type Position } from './lib/geo';
+import { distanceKm, inPolygon, type PolygonGeometry, type Position } from './lib/geo';
+import { PILLARS, pillarSvg } from './pillars';
 import { CORRECTIONS_FORM_URL, SOURCES } from './config';
 import { strings } from './strings';
 
@@ -123,24 +124,55 @@ export function countyCard(data: AppData, id: string): { title: string; html: st
   return { title: county.name, html };
 }
 
+function photoOrFallback(entry: Entry): string {
+  if (entry.photo) {
+    const p = entry.photo;
+    return `<figure class="card-photo"><img src="${escapeHtml(`${import.meta.env.BASE_URL}images/${p.file}`)}" alt="${escapeHtml(p.alt)}" loading="lazy"><figcaption>${external(p.source_url, strings.photoCredit(p.author, p.license))}${p.modified ? ` (${escapeHtml(p.modified.toLowerCase())})` : ''}</figcaption></figure>`;
+  }
+  // No photo: a band in the pillar's color with its symbol, so cards still look finished.
+  return `<div class="card-photo-fallback" style="--pillar:${PILLARS[entry.pillar].color}">${pillarSvg(entry.pillar, 28)}<span>${escapeHtml(PILLARS[entry.pillar].label)}</span></div>`;
+}
+
+/** Places whose pin falls inside a feature's outline. */
+function placesInside(data: AppData, feature: Entry): Entry[] {
+  const shapes = feature.geometry?.features.map((f) => f.geometry as PolygonGeometry) ?? [];
+  return mapped(data).filter((e) => shapes.some((g) => inPolygon([e.location!.lng, e.location!.lat], g)));
+}
+
 export function entryCard(data: AppData, id: string): { title: string; html: string } | null {
   const entry = data.entries.find((e) => e.id === id);
   if (!entry) return null;
-  const photo = entry.photo
-    ? `<figure class="card-photo"><img src="${escapeHtml(`${import.meta.env.BASE_URL}images/${entry.photo.file}`)}" alt="${escapeHtml(entry.photo.alt)}" loading="lazy"><figcaption>${external(entry.photo.source_url, strings.photoCredit(entry.photo.author, entry.photo.license))}${entry.photo.modified ? ` (${escapeHtml(entry.photo.modified.toLowerCase())})` : ''}</figcaption></figure>`
-    : '';
   const towns = entry.municipalities.map((m) => data.towns[m]).filter(Boolean);
-  const where = towns.length
-    ? ` in ${towns.map((t) => escapeHtml(t.name)).join(', ')}`
-    : '';
+  const kicker =
+    entry.kind === 'topic'
+      ? strings.jersey101
+      : `${escapeHtml(PILLARS[entry.pillar].label)}${towns.length ? ` in ${towns.map((t) => escapeHtml(t.name)).join(', ')}` : ''}`;
+
+  const related = entry.related.map((r) => data.entries.find((e) => e.id === r)).filter((e): e is Entry => Boolean(e));
+  const inside = entry.kind === 'feature' ? placesInside(data, entry).filter((p) => !related.includes(p)) : [];
+  const linked = [...related, ...inside];
+  const linkedHeading = entry.kind === 'topic' ? strings.seeItHere : entry.kind === 'feature' ? strings.placesInFeature : strings.relatedEntries;
+
   const html = `
-    <p class="card-kicker">${escapeHtml(capitalize(entry.pillar))}${where}</p>
+    <p class="card-kicker">${kicker}</p>
     <h2 class="card-title" tabindex="-1">${escapeHtml(entry.name)}</h2>
-    ${photo}
+    ${entry.kind === 'topic' ? '' : photoOrFallback(entry)}
     ${entrySections(entry)}
+    ${linked.length ? `<h3>${linkedHeading}</h3>${placeList(linked)}` : ''}
     ${entry.official_url ? `<p>${external(entry.official_url, strings.visitOfficialSite)}</p>` : ''}
     ${sourcesList(entry.sources.map(entrySource))}
     ${correctionLink(entry.name, location.href)}
   `;
   return { title: entry.name, html };
+}
+
+export function jersey101Card(data: AppData): { title: string; html: string } {
+  const topics = data.entries.filter((e) => e.kind === 'topic').sort((a, b) => a.name.localeCompare(b.name));
+  const html = `
+    <p class="card-kicker">${strings.kindTopic}</p>
+    <h2 class="card-title" tabindex="-1">${strings.jersey101}</h2>
+    <p>${strings.jersey101Intro}</p>
+    ${placeList(topics)}
+  `;
+  return { title: strings.jersey101, html };
 }

@@ -12,6 +12,7 @@ const read = (f: string) => JSON.parse(readFileSync(join(DIR, f), 'utf8'));
 
 interface Town {
   name: string;
+  slug: string;
   type: string;
   county: string;
   population: number;
@@ -21,6 +22,7 @@ interface Town {
 }
 interface County {
   name: string;
+  slug: string;
   population: number;
   municipalities: number;
   wikipedia: string;
@@ -63,6 +65,20 @@ for (const [id, c] of Object.entries(counties)) {
   if (!/^https:\/\/en\.wikipedia\.org\/wiki\//.test(c.wikipedia)) errors.push(`${c.name}: missing Wikipedia link`);
 }
 if (countyTotal !== total) errors.push(`county populations add up to ${countyTotal}, municipalities to ${total}`);
+
+// URL slugs must be unique across towns and counties, and URL-safe.
+const slugs = new Map<string, string>();
+for (const item of [...Object.values(towns), ...Object.values(counties)]) {
+  if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(item.slug ?? '')) errors.push(`${item.name}: bad or missing URL slug "${item.slug}"`);
+  if (slugs.has(item.slug)) errors.push(`URL slug "${item.slug}" is used by both ${slugs.get(item.slug)} and ${item.name}`);
+  slugs.set(item.slug, item.name);
+}
+
+const aliases: { name: string; towns: string[] }[] = read('aliases.json');
+for (const a of aliases) {
+  if (!a.name || a.towns.length === 0) errors.push(`alias "${a.name}" has no towns`);
+  for (const id of a.towns) if (!towns[id]) errors.push(`alias "${a.name}" points to unknown town ${id}`);
+}
 
 const mask = read('outside-nj.geojson');
 if (mask.type !== 'FeatureCollection' || mask.features?.length !== 1 || !['Polygon', 'MultiPolygon'].includes(mask.features[0].geometry?.type)) {

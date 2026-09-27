@@ -1,10 +1,12 @@
 // Loads the app's data files. Paths go through BASE_URL because the site lives
 // under /explore-nj/ on GitHub Pages.
 
+import type { FeatureCollection } from 'geojson';
 import type { BBox, Position } from './lib/geo';
 
 export interface Town {
   name: string;
+  slug: string;
   type: string;
   county: string;
   population: number;
@@ -17,6 +19,7 @@ export interface Town {
 
 export interface County {
   name: string;
+  slug: string;
   population: number;
   municipalities: number;
   wikidata: string;
@@ -48,6 +51,8 @@ export interface Entry {
   tags: string[];
   location: { lng: number; lat: number } | null;
   county_fips: string | null;
+  geometry: FeatureCollection | null;
+  label?: Position;
   municipalities: string[];
   related: string[];
   official_url: string | null;
@@ -72,8 +77,14 @@ export interface BoundaryMeta {
   population_url: string;
 }
 
+export interface Alias {
+  name: string;
+  towns: string[];
+}
+
 export interface AppData {
   towns: Record<string, Town>;
+  aliases: Alias[];
   counties: Record<string, County>;
   entries: Entry[];
   meta: BoundaryMeta;
@@ -88,11 +99,12 @@ async function getJson<T>(path: string): Promise<T> {
 }
 
 export async function loadData(): Promise<AppData> {
-  const [towns, counties, entries, meta] = await Promise.all([
+  const [towns, aliases, counties, entries, meta] = await Promise.all([
     getJson<Record<string, Town>>('boundaries/municipalities.json'),
+    getJson<Alias[]>('boundaries/aliases.json'),
     getJson<Record<string, County>>('boundaries/counties.json'),
     getJson<Entry[]>('entries.json'),
     getJson<BoundaryMeta>('boundaries/meta.json'),
   ]);
-  return { towns, counties, entries, meta };
+  return { towns, aliases, counties, entries, meta };
 }
