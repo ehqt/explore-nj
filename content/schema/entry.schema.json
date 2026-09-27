@@ -54,6 +54,13 @@
       "type": "string",
       "pattern": "^34\\d{3}$"
     },
+    "municipalities": {
+      "description": "Places and features: Census GEOIDs of the municipalities they're in. Only needed when the location alone would give the wrong answer, e.g. a place on a town line or state line, or one spanning several towns.",
+      "type": "array",
+      "items": { "type": "string", "pattern": "^34\\d{8}$" },
+      "minItems": 1,
+      "uniqueItems": true
+    },
     "related": {
       "description": "Ids of other entries: 'see it here' links, places inside a feature, highlights of a county.",
       "type": "array",

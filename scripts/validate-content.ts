@@ -1,7 +1,7 @@
 // Checks every content entry and prints a readable report.
 // Exits with status 1 if anything is wrong. Run: npm run validate
 
-import { loadContent, type Entry, type Pillar } from './lib/content.ts';
+import { loadBoundaries, loadContent, type Entry, type Pillar } from './lib/content.ts';
 
 const { entries, errors, warnings } = loadContent();
 
@@ -19,7 +19,20 @@ console.log(`  All entries by pillar:   ${count(entries, (e) => e.meta.pillar as
 console.log(`  By review stage:         ${count(entries, (e) => e.stage)}`);
 const approved = entries.filter((e) => e.approved);
 console.log(`  Approved (on the site):  ${approved.length}`);
-console.log('  County and North/Central/South coverage is reported once the boundary data lands (build step 3).\n');
+const boundaries = loadBoundaries();
+if (boundaries) {
+  const placesByCounty = new Map<string, number>();
+  for (const e of entries.filter((x) => x.meta.kind === 'place')) {
+    for (const c of new Set(e.towns.map((t) => boundaries.towns[t]?.county))) {
+      if (c) placesByCounty.set(c, (placesByCounty.get(c) ?? 0) + 1);
+    }
+  }
+  const thin = Object.entries(boundaries.counties)
+    .filter(([id]) => (placesByCounty.get(id) ?? 0) < 2)
+    .map(([id, c]) => `${c.name.replace(' County', '')} ${placesByCounty.get(id) ?? 0}`);
+  console.log(`  Counties with fewer than 2 places (target: none): ${thin.length}/21${thin.length ? ` (${thin.join(', ')})` : ''}`);
+}
+console.log();
 
 const today = new Date().toISOString().slice(0, 10);
 const due = approved.filter((e) => e.recheckDue <= today);

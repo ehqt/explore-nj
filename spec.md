@@ -49,7 +49,7 @@ The panel is a side panel on desktop and a bottom sheet on phones.
 - Each entry (place, feature, topic, county blurb) is its own Markdown file with frontmatter fields (name, kind, coordinates or geometry file, pillar, sources, review stage) and the prose below. The build compiles them into app data. Boundaries are GeoJSON.
 - **Review workflow:** Claude opens a PR per batch of about 10 entries, with the verifier's report in the description. Eric comments or approves in GitHub; Claude then records the approval in each file and merges. Only approved entries appear on the site. Drafts under review are visible in the public repo; Eric accepted that.
 - Photos come from Wikimedia Commons, with attribution stored per image.
-- Boundaries come from NJOGIS municipal files (license not yet confirmed; must be checked before use), simplified for size. Population comes from the US Census. Exact files and licenses will be confirmed when building starts.
+- Boundaries come from U.S. Census Bureau TIGER/Line county subdivisions (public domain; in New Jersey every county subdivision is a municipality), with water bodies over 0.5 km² cut out and borders simplified to about 15 m. Population is the 2020 Census (P.L. 94-171). This replaced the original NJOGIS plan on 2026-09-27: the Census files are public domain, share codes with the population data, and avoid the licensing uncertainty found with state GIS data. Rebuild with `npm run boundaries`.
 - **Fact-checking (required for all content):**
   - Every specific claim (dates, numbers, names, "first/oldest/largest") is checked against an original or authoritative source: NPS, NJ state/county/municipal sites, the Census, official site operators, museums, historical societies or scholarly works.
   - Wikipedia can point to sources, but it is never the only source for a specific fact.
@@ -81,7 +81,7 @@ The panel is a side panel on desktop and a bottom sheet on phones.
 These are technical fixes with a clear right answer, so they were adopted without a separate decision.
 
 **Boundaries and geodata**
-- Reproject NJOGIS data from NJ State Plane to WGS84.
+- Reproject boundary data to WGS84.
 - Simplify with topology preserved (mapshaper) so shared borders and holes survive. Build counties by dissolving municipalities so the lines match exactly. Use shoreline-clipped polygons.
 - Handle donut towns (Freehold Borough inside Freehold Township, and similar): clicks hit the inner town, labels use polylabel/point-on-surface, and fly-to uses the bounding box.
 - Join on codes (Census GEOID / state municipal code), never names. Derive the municipality count from the data and assert it in CI. Handle the 2022 Pine Valley–Pine Hill merger against 2020 Census figures.

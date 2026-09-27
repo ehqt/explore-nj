@@ -1,10 +1,30 @@
 // Every user-facing string lives here so the app can be translated later.
 export const strings = {
   tagline: 'Get to know your new state',
-  privacyNote:
-    'No cookies or analytics. Map tiles load from OpenFreeMap, a third-party service.',
+  privacyNote: 'No cookies or analytics. Map tiles load from OpenFreeMap, a third-party service.',
   noWebGL:
     "Your browser or device can't display the interactive map (WebGL is unavailable or turned off). Try a recent version of Chrome, Firefox, Safari or Edge.",
-  basemapFailed:
-    "The background map couldn't load, so only a plain map is shown. Try refreshing in a little while.",
+  basemapFailed: "The background map couldn't load, so only a plain map is shown. Try refreshing in a little while.",
+  dataFailed: "Some of the app's data couldn't load. Try refreshing the page.",
+  mapLabel: 'Map of New Jersey. Click a county or, when zoomed in, a town to learn about it.',
+  closePanel: 'Close',
+  panelLabel: 'Details',
+  county: 'County',
+  residents2020: 'residents (2020 Census)',
+  municipalities: 'municipalities',
+  placesHere: 'Featured places here',
+  placesInCounty: 'Featured places in this county',
+  nearestPlaces: 'Nearest featured places',
+  noPlacesYet: (town: string) => `No featured places in ${town} yet.`,
+  milesAway: (miles: number) => `(about ${miles} ${miles === 1 ? 'mile' : 'miles'} away)`,
+  exploreTowns: 'Zoom in to see its towns',
+  readMoreWikipedia: (name: string) => `Read more about ${name} on Wikipedia`,
+  wikipediaArticle: (name: string) => `${name}`,
+  censusBoundaries: 'TIGER/Line boundaries (municipal borders)',
+  censusPopulation: '2020 Census redistricting data (population)',
+  sources: 'Sources',
+  archivedCopy: 'archived copy',
+  reportCorrection: 'Report a correction',
+  photoCredit: (author: string, license: string) => `Photo: ${author}, ${license}`,
+  visitOfficialSite: 'Official site for hours and directions',
 } as const;
