@@ -33,6 +33,10 @@ review:
     date: 2026-09-26
     by: Claude (separate verifier session)
     note: First pass found no factual errors but raised framing issues (the 1804 law freed no one already enslaved; the 1846 law freed children born afterward; figures out of date order; close paraphrases); all fixed. Re-check passed. Still needs outside review before approval.
+  - stage: approved
+    date: 2026-09-27
+    by: Eric
+    note: Approved without outside review; relies on the New Jersey State Library curriculum and the Princeton & Slavery Project.
 ---
 
 Slavery existed in New Jersey from the colonial period, and it ended slowly. In 1804 the state passed a law for the gradual abolition of slavery. It freed no one who was already enslaved. Instead, children born to enslaved mothers after July 4, 1804, were to be freed only after serving their mother's enslaver as "apprentices," until age 21 for women and 25 for men. The change was slow: 7,557 people were still enslaved in New Jersey in 1820. [@njsl-antebellum] [@princeton-slavery]

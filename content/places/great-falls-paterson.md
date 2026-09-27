@@ -51,6 +51,9 @@ review:
     date: 2026-09-26
     by: Claude (separate verifier session)
     note: First pass found two single-source "first" claims, a near-verbatim sentence, the writer's own framing and an unhedged date where the source gives two figures; all fixed. Re-check passed except one sentence that put the writer's words in the park's mouth, now reworded to match the source. "First planned industrial city" is kept only as attributed to the National Park Service.
+  - stage: approved
+    date: 2026-09-27
+    by: Eric
 ---
 
 The Great Falls of the Passaic sit in the middle of Paterson, where the Passaic River drops through a dark basalt gorge. The falls are the centerpiece of Paterson Great Falls National Historical Park, and they were named a National Natural Landmark in 1967. [@nps-nature]

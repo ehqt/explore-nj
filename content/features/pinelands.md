@@ -77,6 +77,9 @@ review:
     date: 2026-09-26
     by: Claude (separate verifier session)
     note: First pass found a cited NPS page that didn't support its claim, two single-source superlatives, a near-verbatim sentence and a misleading "first cultivated cranberry bogs"; all fixed. Re-check passed except one sentence with outside knowledge ("closed to visitors"), now replaced with what the source says.
+  - stage: approved
+    date: 2026-09-27
+    by: Eric
 ---
 
 The Pinelands, also called the Pine Barrens, cover about 1.1 million acres of southern New Jersey. That is about 22 percent of the state's land, spread across parts of seven counties and all or part of 56 municipalities. [@pc-size] [@pc-history]

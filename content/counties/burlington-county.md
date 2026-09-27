@@ -46,6 +46,9 @@ review:
     date: 2026-09-26
     by: Claude (separate verifier session)
     note: First pass found a single-source "first cultivated blueberry" claim and an unsupported summary; both fixed. Re-check passed with every sentence supported.
+  - stage: approved
+    date: 2026-09-27
+    by: Eric
 ---
 
 Burlington County is the largest county in New Jersey by land area, running from the Delaware River to the Atlantic coast at the Great Bay. Its county seat is Mount Holly, and it is made up of 40 municipalities: 3 cities, 6 boroughs and 31 townships. [@bc-profile] [@census-gazetteer-counties] [@census-gazetteer-cousubs]

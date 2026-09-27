@@ -44,6 +44,9 @@ review:
     date: 2026-09-26
     by: Claude (separate verifier session)
     note: First pass found a cultural claim stated as fact, an unattributed folklore verdict, the writer's own framing, and a wrong article title; all fixed. Re-check passed except two missing citations, now added.
+  - stage: approved
+    date: 2026-09-27
+    by: Eric
 ---
 
 Ask for a breakfast sandwich almost anywhere in New Jersey and you'll meet a smoked, spiced pork product that is sliced, seared and served with egg and cheese on a hard roll or bagel. It is sold in diners, delis and bagel shops across the state. What to call it is the question. [@eater-2015] [@bill-a3666]
