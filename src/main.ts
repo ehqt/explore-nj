@@ -14,6 +14,7 @@ import { addBoundaryLayers, LAYERS, showSelection, TOWN_ZOOM } from './map/layer
 import { PILLARS, pillarSvg } from './pillars';
 import { pathFor, sameSelection, selectionFromPath, type Selection } from './router';
 import { createSearch } from './search';
+import { createTour } from './tour';
 import { createPanel, type Panel } from './panel';
 import { strings } from './strings';
 
@@ -97,6 +98,7 @@ function wireInteractions(map: maplibregl.Map, data: AppData, panel: Panel): voi
   const fit = (bbox: BBox, options: maplibregl.FitBoundsOptions = {}) =>
     map.fitBounds(bbox, { padding: panel.mapPadding(), ...motion(), ...options });
   let current: Selection | null = null;
+  const showListeners: ((sel: Selection | null) => void)[] = [];
 
   /** Opens a card and moves the map to it. `history` says whether to add a browser history step. */
   const show = (sel: Selection | null, history: 'push' | 'replace' | 'none' = 'push', animate = true) => {
@@ -133,6 +135,7 @@ function wireInteractions(map: maplibregl.Map, data: AppData, panel: Panel): voi
       }
     }
     current = sel;
+    for (const listener of showListeners) listener(sel);
     document.title = sel ? `${panel.title()} · Explore NJ` : 'Explore NJ';
     const path = pathFor(data, sel);
     if (history === 'push' && path !== location.pathname) window.history.pushState(null, '', path);
@@ -196,6 +199,7 @@ function wireInteractions(map: maplibregl.Map, data: AppData, panel: Panel): voi
     });
   }
   renderLegend(document.getElementById('legend'));
+  createTour({ data, stops: data.tour, panel, show: (sel) => show(sel), onShow: (l) => showListeners.push(l) });
 
   // Open whatever the address points at (a shared link, or a prerendered page).
   const initial = selectionFromPath(data, location.pathname);

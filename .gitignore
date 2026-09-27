@@ -4,3 +4,4 @@ dist/
 *.log
 public/data/entries.json
 .cache/
+public/data/tour.json
