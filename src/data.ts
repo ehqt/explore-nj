@@ -88,6 +88,8 @@ export interface AppData {
   counties: Record<string, County>;
   entries: Entry[];
   meta: BoundaryMeta;
+  /** Entry ids of the "Start here" tour, in order. */
+  tour: string[];
 }
 
 export const dataUrl = (path: string) => `${import.meta.env.BASE_URL}data/${path}`;
@@ -99,12 +101,13 @@ async function getJson<T>(path: string): Promise<T> {
 }
 
 export async function loadData(): Promise<AppData> {
-  const [towns, aliases, counties, entries, meta] = await Promise.all([
+  const [towns, aliases, counties, entries, meta, tour] = await Promise.all([
     getJson<Record<string, Town>>('boundaries/municipalities.json'),
     getJson<Alias[]>('boundaries/aliases.json'),
     getJson<Record<string, County>>('boundaries/counties.json'),
     getJson<Entry[]>('entries.json'),
     getJson<BoundaryMeta>('boundaries/meta.json'),
+    getJson<{ stops: string[] }>('tour.json'),
   ]);
-  return { towns, aliases, counties, entries, meta };
+  return { towns, aliases, counties, entries, meta, tour: tour.stops };
 }

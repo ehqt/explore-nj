@@ -6,7 +6,7 @@ import { join } from 'node:path';
 import mapshaper from 'mapshaper';
 import { compileForApp, loadContent, ROOT } from './lib/content.ts';
 
-const { entries, errors } = loadContent();
+const { entries, tour, errors } = loadContent();
 if (errors.length > 0) {
   console.error(`Content has ${errors.length} error(s). Run "npm run validate" for details.`);
   process.exit(1);
@@ -29,4 +29,5 @@ for (const entry of data) {
 const outDir = join(ROOT, 'public', 'data');
 mkdirSync(outDir, { recursive: true });
 writeFileSync(join(outDir, 'entries.json'), JSON.stringify(data));
-console.log(`Wrote ${data.length} approved entries (of ${entries.length}) to public/data/entries.json`);
+writeFileSync(join(outDir, 'tour.json'), JSON.stringify({ stops: tour }));
+console.log(`Wrote ${data.length} approved entries (of ${entries.length}) and a ${tour.length}-stop tour to public/data/`);

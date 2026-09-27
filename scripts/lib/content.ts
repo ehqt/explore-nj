@@ -135,6 +135,8 @@ export interface Problem {
 
 export interface LoadResult {
   entries: Entry[];
+  /** Ids of the tour stops, in order (content/tour.yaml). */
+  tour: string[];
   errors: Problem[];
   warnings: Problem[];
 }
@@ -408,7 +410,33 @@ export function loadContent(): LoadResult {
     }
   }
 
-  return { entries, errors, warnings };
+  // The "Start here" tour may only visit approved places and features.
+  const tourFile = join(CONTENT_DIR, 'tour.yaml');
+  let tour: string[] = [];
+  if (existsSync(tourFile)) {
+    const file = relative(ROOT, tourFile);
+    try {
+      const parsed = parseYaml(readFileSync(tourFile, 'utf8')) as { stops?: unknown };
+      if (!Array.isArray(parsed?.stops) || !parsed.stops.every((s) => typeof s === 'string')) {
+        errors.push({ file, message: 'expected a "stops:" list of entry ids' });
+      } else {
+        tour = parsed.stops as string[];
+        const seen = new Set<string>();
+        for (const id of tour) {
+          const e = byId.get(id);
+          if (seen.has(id)) errors.push({ file, message: `stop "${id}" is listed twice` });
+          seen.add(id);
+          if (!e) errors.push({ file, message: `stop "${id}" is not an entry` });
+          else if (e.meta.kind !== 'place' && e.meta.kind !== 'feature') errors.push({ file, message: `stop "${id}" is a ${e.meta.kind}; stops must be places or features` });
+          else if (!e.approved) errors.push({ file, message: `stop "${id}" isn't approved yet; add it to the tour once it is` });
+        }
+      }
+    } catch (err) {
+      errors.push({ file, message: `not valid YAML: ${(err as Error).message}` });
+    }
+  }
+
+  return { entries, tour, errors, warnings };
 }
 
 /** The data the app loads: approved entries only, with geometry inlined. */

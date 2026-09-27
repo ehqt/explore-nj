@@ -3,7 +3,7 @@
 
 import { loadBoundaries, loadContent, type Entry, type Pillar } from './lib/content.ts';
 
-const { entries, errors, warnings } = loadContent();
+const { entries, tour, errors, warnings } = loadContent();
 
 function count<T extends string>(items: Entry[], key: (e: Entry) => T): string {
   const counts = new Map<T, number>();
@@ -19,6 +19,7 @@ console.log(`  All entries by pillar:   ${count(entries, (e) => e.meta.pillar as
 console.log(`  By review stage:         ${count(entries, (e) => e.stage)}`);
 const approved = entries.filter((e) => e.approved);
 console.log(`  Approved (on the site):  ${approved.length}`);
+console.log(`  Tour stops:              ${tour.length} (target: about 7)`);
 const boundaries = loadBoundaries();
 if (boundaries) {
   const placesByCounty = new Map<string, number>();

@@ -217,8 +217,13 @@ body {
   font-size: 0.95rem;
 }
 
+.panel-top {
+  position: relative;
+}
+
 .panel-close {
   position: absolute;
+  z-index: 1;
   top: 0.4rem;
   right: 0.5rem;
   width: 2.25rem;
@@ -423,4 +428,106 @@ body {
 .prerendered {
   padding: 1rem;
   max-width: 40rem;
+}
+
+/* Tour */
+.panel-banner {
+  border-bottom: 1px solid #dde1e6;
+  background: #f5f8fb;
+  border-radius: 10px 10px 0 0;
+}
+
+.tour-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.75rem;
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+}
+
+.tour-status {
+  margin: 0;
+}
+
+.tour-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.button-primary {
+  background: var(--color-brand);
+  color: #fff;
+}
+
+.button-primary:hover {
+  background: #163b5c;
+}
+
+.button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.tour-exit {
+  border: 0;
+  background: transparent;
+  font-size: 1.3rem;
+  line-height: 1;
+  color: var(--color-muted);
+  cursor: pointer;
+  padding: 0.2rem 0.35rem;
+  border-radius: 50%;
+}
+
+.tour-exit:hover {
+  background: #e3e8ee;
+}
+
+.tour-hint,
+.tour-chip {
+  position: absolute;
+  z-index: 4;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgb(0 0 0 / 0.18);
+  font-size: 0.95rem;
+}
+
+.tour-hint {
+  top: calc(var(--header-height) + 0.75rem);
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(26rem, calc(100% - 2rem));
+  padding: 0.8rem 1rem;
+}
+
+.tour-hint p {
+  margin: 0 0 0.6rem;
+}
+
+.tour-chip {
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.45rem 0.5rem 0.45rem 0.9rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .tour-hint {
+    top: auto;
+    bottom: 5.5rem;
+  }
+}
+
+.tour-hint[hidden],
+.tour-chip[hidden],
+.header-button[hidden] {
+  display: none;
 }

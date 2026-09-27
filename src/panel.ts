@@ -6,6 +6,8 @@ export interface Panel {
   open(html: string, title: string): void;
   close(): void;
   isOpen(): boolean;
+  /** A strip pinned to the top of the panel (used by the tour); stays across cards. */
+  setBanner(content: HTMLElement | null): void;
   /** The open card's title. */
   title(): string;
   /** Space the panel covers, so the map can keep targets visible beside it. */
@@ -22,11 +24,15 @@ export function createPanel(host: HTMLElement): Panel {
   el.hidden = true;
   el.setAttribute('aria-label', strings.panelLabel);
   el.innerHTML = `
-    <button type="button" class="panel-close" aria-label="${strings.closePanel}">×</button>
+    <div class="panel-banner" hidden></div>
+    <div class="panel-top">
+      <button type="button" class="panel-close" aria-label="${strings.closePanel}">×</button>
+    </div>
     <div class="panel-body"></div>`;
   host.append(el);
 
   const body = el.querySelector<HTMLDivElement>('.panel-body')!;
+  const banner = el.querySelector<HTMLDivElement>('.panel-banner')!;
   const closeButton = el.querySelector<HTMLButtonElement>('.panel-close')!;
   const closeCallbacks: (() => void)[] = [];
   const clickCallbacks: ((target: HTMLElement) => void)[] = [];
@@ -49,6 +55,10 @@ export function createPanel(host: HTMLElement): Panel {
       for (const cb of closeCallbacks) cb();
     },
     isOpen: () => !el.hidden,
+    setBanner(content) {
+      banner.replaceChildren(...(content ? [content] : []));
+      banner.hidden = !content;
+    },
     title: () => el.getAttribute('aria-label') ?? '',
     mapPadding() {
       const base = { top: 40, right: 40, bottom: 40, left: 40 };

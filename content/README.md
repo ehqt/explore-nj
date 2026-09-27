@@ -60,6 +60,13 @@ The full list of fields and what each means is in `schema/entry.schema.json`.
 
 Only entries whose last stage is `approved` appear on the site.
 
+## The "Start here" tour
+
+`tour.yaml` lists the tour's stops in order, by entry id. A stop must be an approved place
+or feature; CI fails if it isn't. Planned stops are kept there as comments until their
+entries are approved. The tour button and first-visit hint only appear once there are at
+least two stops.
+
 ## Review workflow
 
 1. Claude drafts entries and checks each claim against its sources (`drafted`, `source-checked`).
