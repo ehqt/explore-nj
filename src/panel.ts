@@ -6,6 +6,8 @@ export interface Panel {
   open(html: string, title: string): void;
   close(): void;
   isOpen(): boolean;
+  /** The open card's title. */
+  title(): string;
   /** Space the panel covers, so the map can keep targets visible beside it. */
   mapPadding(): { top: number; right: number; bottom: number; left: number };
   onClose(callback: () => void): void;
@@ -47,6 +49,7 @@ export function createPanel(host: HTMLElement): Panel {
       for (const cb of closeCallbacks) cb();
     },
     isOpen: () => !el.hidden,
+    title: () => el.getAttribute('aria-label') ?? '',
     mapPadding() {
       const base = { top: 40, right: 40, bottom: 40, left: 40 };
       if (el.hidden) return base;

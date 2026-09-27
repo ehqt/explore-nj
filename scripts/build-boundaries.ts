@@ -27,9 +27,10 @@ const waterUrl = (county: string) =>
   `https://www2.census.gov/geo/tiger/TIGER${BOUNDARY_YEAR}/AREAWATER/tl_${BOUNDARY_YEAR}_34${county}_areawater.zip`;
 const NJ_COUNTY_CODES = ['001', '003', '005', '007', '009', '011', '013', '015', '017', '019', '021', '023', '025', '027', '029', '031', '033', '035', '037', '039', '041'];
 // Water bodies smaller than this stay part of their town (ponds, narrow creeks).
-const MIN_WATER_AREA_M2 = 500_000;
+const MIN_WATER_AREA_M2 = 2_000_000;
 // Simplification tolerance: borders stay within about this many meters of the Census line.
 const SIMPLIFY_METERS = 15;
+const PLACES_URL = `https://www2.census.gov/geo/tiger/TIGER${BOUNDARY_YEAR}/PLACE/tl_${BOUNDARY_YEAR}_34_place.zip`;
 const PL_URL =
   'https://www2.census.gov/programs-surveys/decennial/2020/data/01-Redistricting_File--PL_94-171/New_Jersey/nj2020.pl.zip';
 const NJ_POPULATION_2020 = 9_288_994;
@@ -148,6 +149,7 @@ async function run(commands: string, input: Record<string, string>): Promise<Rec
 //    develop gaps or overlaps, and holes (towns inside towns) survive.
 download(BOUNDARY_URL);
 download(NAMES_URL);
+download(PLACES_URL);
 for (const c of NJ_COUNTY_CODES) download(waterUrl(c));
 const townsShp = join(CACHE, `tl_${BOUNDARY_YEAR}_34_cousub.shp`);
 const waterShps = NJ_COUNTY_CODES.map((c) => join(CACHE, `tl_${BOUNDARY_YEAR}_34${c}_areawater.shp`));
@@ -218,6 +220,22 @@ const labelFor = (features: Feature[], key: string) =>
 const townLabelById = labelFor(townLabels, 'GEOID');
 const countyLabelById = labelFor(countyLabels, 'COUNTYFP');
 
+const slugify = (text: string) =>
+  text
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+
+// URL slugs: "freehold-borough"; names used more than once also get their county,
+// e.g. "washington-township-morris-county". Built only from Census names, so they're stable.
+const baseSlug = (t: Feature) => slugify(`${t.properties.NAME} ${TYPES[String(t.properties.LSAD)] ?? ''}`);
+const slugCounts = new Map<string, number>();
+for (const t of towns) slugCounts.set(baseSlug(t), (slugCounts.get(baseSlug(t)) ?? 0) + 1);
+const townSlug = (t: Feature) =>
+  slugCounts.get(baseSlug(t))! > 1 ? `${baseSlug(t)}-${slugify(countyNames.get(String(t.properties.COUNTYFP)) ?? '')}` : baseSlug(t);
+
 const townTable: Record<string, unknown> = {};
 for (const t of towns) {
   const p = t.properties;
@@ -230,6 +248,7 @@ for (const t of towns) {
   if (!link) problems.push(`${p.NAME}: no Wikidata item with an English Wikipedia article`);
   townTable[id] = {
     name: p.NAME,
+    slug: townSlug(t),
     type,
     county: `34${p.COUNTYFP}`,
     population: pop,
@@ -250,6 +269,7 @@ for (const c of counties) {
   const link = countyLinks.get(id);
   if (!link) problems.push(`${countyNames.get(fp)}: no Wikidata item with an English Wikipedia article`);
   countyTable[id] = {
+    slug: slugify(countyNames.get(fp) ?? ''),
     name: countyNames.get(fp),
     population: members.reduce((sum, [, t]) => sum + ((t as { population?: number }).population ?? 0), 0),
     municipalities: members.length,
@@ -279,6 +299,24 @@ writeFileSync(join(OUT, 'counties.geojson'), collection(counties));
 writeFileSync(join(OUT, 'outside-nj.geojson'), mask['mask.json']);
 writeFileSync(join(OUT, 'municipalities.json'), JSON.stringify(townTable));
 writeFileSync(join(OUT, 'counties.json'), JSON.stringify(countyTable));
+
+// Community names people use in addresses (Census Designated Places, e.g. Iselin or
+// Princeton Junction) that aren't municipalities. Each points to the town(s) it overlaps.
+const cdps = JSON.parse(
+  (
+    await run(
+      `-i ${join(CACHE, `tl_${BOUNDARY_YEAR}_34_place.shp`)} -filter 'LSAD === "57"' \
+       -join ${townsShp} calc='towns=collect(GEOID)' \
+       -filter-fields NAME,towns -o format=json cdps.json`,
+      {},
+    )
+  )['cdps.json'],
+) as { NAME: string; towns: string[] }[];
+const aliases = cdps
+  .map((c) => ({ name: c.NAME, towns: c.towns.filter((id) => townTable[id]).sort() }))
+  .filter((a) => a.towns.length > 0)
+  .sort((a, b) => a.name.localeCompare(b.name));
+writeFileSync(join(OUT, 'aliases.json'), JSON.stringify(aliases));
 writeFileSync(
   join(OUT, 'meta.json'),
   JSON.stringify(
@@ -289,6 +327,7 @@ writeFileSync(
       population_url: PL_URL,
       links: 'Wikidata, matched on Census GNIS codes',
       municipalities: towns.length,
+      aliases: 'Census Designated Places (TIGER/Line places with LSAD 57), each linked to the municipalities it overlaps',
       counties: counties.length,
       state_population_2020: NJ_POPULATION_2020,
       built: new Date().toISOString().slice(0, 10),

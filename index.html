@@ -6,14 +6,19 @@
     <title>Explore NJ</title>
     <meta name="description" content="A map-centered guide to New Jersey's geography, history and culture for new residents." />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- page-meta: scripts/prerender.ts fills in canonical and link-preview tags per page -->
   </head>
   <body>
     <header class="app-header">
-      <h1 class="app-title">Explore NJ</h1>
+      <a class="app-title" href="/" id="home-link">Explore NJ</a>
       <p class="app-tagline" id="tagline"></p>
+      <div class="search" id="search"></div>
+      <button type="button" class="header-button" id="jersey-101-button">Jersey 101</button>
     </header>
     <main id="map" class="map" aria-label="Map of New Jersey"></main>
+    <div id="legend" class="legend" hidden></div>
     <div id="notice" class="notice" role="status" hidden></div>
+    <!-- page-content: scripts/prerender.ts adds each page's text here for search engines and no-JS readers -->
     <footer class="privacy-note" id="privacy-note"></footer>
     <script type="module" src="/src/main.ts"></script>
   </body>
