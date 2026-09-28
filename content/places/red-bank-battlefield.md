@@ -60,6 +60,10 @@ review:
     date: 2026-09-28
     by: Claude (separate verifier session)
     note: "Round 1 found conflicting casualty counts (about half per the Battlefield Trust, 382 of about 2,300 per the 2019 county study) presented one-sided, now both given; restated the February 1778 Rhode Island law accurately; reworded two close paraphrases; fixed \"thousands of cedar boards\". Round 2 found \"two days later\" for the November 20 demolition; now dated exactly."
+  - stage: approved
+    date: 2026-09-28
+    by: Eric
+    note: Approved without outside review; relies on Gloucester County's 2019 study of the fort's Black and Native American soldiers.
 ---
 
 On the Delaware River in the town of National Park, Red Bank Battlefield Park is what the county calls "Gloucester County's historic park." In 1777 Americans held a fort here on a prominent bluff known as Red Bank. They called it Fort Mercer, after Brigadier General Hugh Mercer, who had been fatally wounded at the Battle of Princeton that January. Its partner, Fort Mifflin, stood on Mud Island on the Pennsylvania side. [@gc-park] [@selig-2019]

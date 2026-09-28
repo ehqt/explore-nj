@@ -56,6 +56,10 @@ review:
     date: 2026-09-28
     by: Claude (separate verifier session)
     note: "Round 1 confirmed every fact, including the 2025-2027 closure, and that the nomination's wrong death date (May 26) is not used; cut an unsourced \"first came\" and reworded two close paraphrases. Round 2 passed."
+  - stage: approved
+    date: 2026-09-28
+    by: Eric
+    note: Approved to ship while closed for renovation (target reopening summer 2027); the entry says so.
 ---
 
 Walt Whitman spent the last eight years of his life, 1884 to 1892, in a modest two-story wooden house in Camden. The house dates to around 1848 and was built in the Greek Revival style. Both the Walt Whitman Association and the New Jersey Historic Trust's Journey Through Jersey site describe it as the only home the poet ever owned. [@nhl-nomination] [@jtj] [@wwa-history]

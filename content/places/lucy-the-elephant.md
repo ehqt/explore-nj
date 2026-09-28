@@ -86,6 +86,9 @@ review:
     date: 2026-09-28
     by: Claude (separate verifier session)
     note: "Round 1 attributed the operator history, stopped crediting Lafferty with all three elephants, cut unsourced \"canopied\" and \"beachfront\", and reworded a close paraphrase. Round 2 passed; its optional tweak was applied so the land-sale timing no longer picks between the committee's two pages (by 1969 vs 1970)."
+  - stage: approved
+    date: 2026-09-28
+    by: Eric
 ---
 
 Lucy is a building shaped like an elephant, six stories high, standing by the beach in Margate City on Absecon Island. Visitors enter through spiral stairs inside the hind legs and can climb all the way up to the howdah, the riding carriage on its back. [@lucy-home] [@lucy-faqs] [@margate-about]

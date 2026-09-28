@@ -67,6 +67,9 @@ review:
     date: 2026-09-28
     by: Claude (separate verifier session)
     note: "Round 1 moved present-tense claims resting on a 2018 order and an undated brochure into the past tense, fixed a quote cited to the wrong source, and corrected \"recreating stained glass\" to the source's \"recreate the original details\". Round 2 passed."
+  - stage: approved
+    date: 2026-09-28
+    by: Eric
 ---
 
 On West State Street in Trenton, a gold dome marks the building where New Jersey's laws are made. The State House holds the chambers of both the Senate and the General Assembly, and its tours take in the executive side of the building as well as the legislative one. [@njleg-legislature] [@tours-faq] [@tours-history]

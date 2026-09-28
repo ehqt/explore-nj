@@ -59,6 +59,9 @@ review:
     date: 2026-09-28
     by: Claude (separate verifier session)
     note: "Round 1 found a writer's own framing (\"not a size label\"), a near-copy of the Census glossary, and Toms River's 88,791 given without saying it is the CDP rather than the township; all fixed. Round 2 passed."
+  - stage: approved
+    date: 2026-09-28
+    by: Eric
 ---
 
 New Jersey has 564 municipalities, a figure given by both the state's official website and the New Jersey State League of Municipalities. [@nj-fast-facts] [@njlm-forms]

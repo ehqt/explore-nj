@@ -76,6 +76,10 @@ review:
     date: 2026-09-28
     by: Claude (separate verifier session)
     note: "Round 1 confirmed facts, attributed superlatives, hard-history wording and pin; reworded two close paraphrases and narrowed \"Worth a visit?\" to the grounds (the building is administrative offices). Round 2 found the rewrite said \"almost everything\" where the source says all, and added \"families\"; both fixed."
+  - stage: approved
+    date: 2026-09-28
+    by: Eric
+    note: Approved without outside review; relies on Rutgers' Scarlet and Black project and university sources.
 ---
 
 Old Queens is a brownstone building at the center of what became Queen's Campus, the historic core of Rutgers in New Brunswick. John McComb, a New York City architect, drew it in the Federal style. College trustees laid the cornerstone in 1809. By 1811 it already held Queen's College, the New Brunswick Theological Seminary and a grammar school, and in 1825, once building work was done, the college moved in fully. [@ipo-old-queens]

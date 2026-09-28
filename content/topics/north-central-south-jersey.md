@@ -50,6 +50,10 @@ review:
     date: 2026-09-28
     by: Claude (separate verifier session)
     note: "Round 1 confirmed all poll numbers, dates and quotes and found the tone fair to every region; fixed one close paraphrase, a dropped \"tended to\" hedge and an ungrammatical join into a quote. Round 2 passed."
+  - stage: approved
+    date: 2026-09-28
+    by: Eric
+    note: Approved without the state's tourism-region list (no readable official source).
 ---
 
 The Monmouth University Polling Institute has more than once asked New Jersey residents a simple question: do you call where you live North, Central, or South Jersey? In a poll taken February 29 to March 4, 2024, 41% answered North, 34% Central and 23% South. A January 2008 Monmouth poll asking a similar question found 40%, 35% and 23%. [@monmouth-2024] [@monmouth-2008]

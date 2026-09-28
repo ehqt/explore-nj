@@ -59,6 +59,10 @@ review:
     date: 2026-09-28
     by: Claude (separate verifier session)
     note: "Round 1 found the house said to stand on Jacob C. White's land, which the nomination's own deed list contradicts (the first parcel came from Thomas Stephenson; White sold Mott one parcel in 1850); also dated the population, stopped saying Ralph Smith sold lots himself, quoted the Society's no-primary-source statement exactly, and added the motorized-wheelchair limit. Round 2 passed; oral-tradition framing confirmed throughout."
+  - stage: approved
+    date: 2026-09-28
+    by: Eric
+    note: Approved without outside review; relies on the Lawnside Historical Society, the Borough of Lawnside and the National Register nomination.
 ---
 
 The Peter Mott House is a small, two-story wood-frame house in Lawnside, a Camden County borough of about 3,000 people, according to the 2022 Census Bureau survey figure the borough cites. Peter Mott, a free Black farmer born around 1807, bought the first of three parcels here in 1844. He and his wife, Elizabeth Ann Mott, lived in the house, which went up in two stages, around 1845 and around 1870. Its 1994 National Register nomination called it the oldest known house in the borough. [@nrhp-nomination] [@lawnside-about]

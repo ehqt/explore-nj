@@ -71,6 +71,9 @@ review:
     date: 2026-09-28
     by: Claude (separate verifier session)
     note: "Round 1 read the 1970 nomination from rendered scans (its OCR is garbled) and confirmed every figure; added the park service inventory's first-lit (1857) and lens (1859) dates and the museum's 1927 decommissioning date to the stated disagreements, and reworded two close paraphrases of the Historic Trust. Round 2 passed."
+  - stage: approved
+    date: 2026-09-28
+    by: Eric
 ---
 
 Barnegat Lighthouse stands at the northern end of Long Beach Island in Ocean County, in the borough of Barnegat Light. It is nicknamed "Old Barney." [@nrhp-nomination] [@borough-history] [@njht]

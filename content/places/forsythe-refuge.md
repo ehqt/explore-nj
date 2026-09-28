@@ -54,6 +54,9 @@ review:
     date: 2026-09-28
     by: Claude (separate verifier session)
     note: "Round 1 replaced an undated piping-plover share with the Service's current wording and reworded two close paraphrases. Round 2 found \"loops\" and \"ponds\" unsupported for the Wildlife Drive (fixed) and asked for Long Beach Township, where the Holgate Wilderness Area named in the entry lies, to be added to municipalities (done; the township comes from the boundary data, the sources name the island)."
+  - stage: approved
+    date: 2026-09-28
+    by: Eric
 ---
 
 Edwin B. Forsythe National Wildlife Refuge protects more than 48,000 acres of coastal land and water in southern New Jersey, in Atlantic, Burlington and Ocean counties. Its salt marsh stretches about 50 miles along the back bays of the shore, from Barnegat Bay in Brick Township south to Reeds Bay, "just outside Atlantic City." Wetlands make up more than 82 percent of the refuge, and most of that is salt marsh dotted with coves and shallow bays. [@fws-home] [@fws-about]
