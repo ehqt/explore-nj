@@ -1,16 +1,14 @@
 # The "Start here" tour. Each stop is the id of an approved place or feature,
-# in the order the tour visits them. The spec calls for about seven stops that
-# together cover the state's range; planned ones are listed below, commented out
-# until their entries are written and approved.
+# in the order the tour visits them (roughly north to south).
 #
 # CI checks that every stop exists, is a place or feature, and is approved.
 
 stops:
+  - delaware-water-gap
+  - morristown-nhp
   - great-falls-paterson
-  # - hudson-waterfront        (planned: Hudson River waterfront)
-  # - newark                   (planned: Newark)
-  # - delaware-water-gap       (planned: Delaware Water Gap)
-  # - trenton-princeton        (planned: Trenton and Princeton, Revolutionary War)
+  - thomas-edison-nhp
+  - ellis-island
+  - sandy-hook
   - pinelands
-  # - the-shore                (planned: the Jersey Shore)
-  # - south-jersey-farmland    (planned: South Jersey farmland)
+  - cape-may
