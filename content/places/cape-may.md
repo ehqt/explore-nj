@@ -64,6 +64,9 @@ review:
     date: 2026-09-27
     by: Claude (separate verifier session)
     note: 'Round 1 found two sentences copied closely from the city''s pages, "pedestrian" not in the cited sources, and a visitor tip resting on the 1976 nomination (dropped). Round 2 found the text still equated the whole city with the landmark district; reworded to match the nomination''s boundary, which excludes the Coast Guard property (checked against the nomination text).'
+  - stage: approved
+    date: 2026-09-27
+    by: Eric
 ---
 
 Cape May sits at the southern tip of New Jersey, at the end of the Cape May Peninsula. The city calls itself "The Nation's Oldest Seashore Resort," and the National Park Service's landmark nomination says it has "a substantial claim" to that title. The Cape May Historic District, a National Historic Landmark recognized for its concentration of Victorian buildings, covers the city apart from its Coast Guard property. [@nhl-nomination] [@city-about] [@nhl-list]

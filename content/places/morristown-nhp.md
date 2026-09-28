@@ -93,6 +93,9 @@ review:
     date: 2026-09-27
     by: Claude (separate verifier session)
     note: 'Round 1 found the "four separate areas" sentence listed five things and several close paraphrases; all fixed. All four Park Service superlatives confirmed as accurately attributed. Round 2 passed (one optional wording change taken).'
+  - stage: approved
+    date: 2026-09-27
+    by: Eric
 ---
 
 Morristown National Historical Park preserves the places where General George Washington and the Continental Army spent their winter encampment from December 1779 to June 1780. The National Park Service calls it the coldest winter on record, and says weather historians agree it was the worst winter of the 18th century. The park is made up of four separate areas: Washington's Headquarters (the museum and the Ford Mansion) and Fort Nonsense in the north, and Jockey Hollow and the New Jersey Brigade area in the south. [@nps-home] [@nps-faq] [@nps-places] [@nps-directions]

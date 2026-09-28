@@ -76,6 +76,9 @@ review:
     date: 2026-09-27
     by: Claude (separate verifier session)
     note: 'Round 1 found claims from an undated 1990s brochure presented as current ("the Hook is still being built", erosion), an overstated "had to hug the shore", an opinion stated as fact, and close paraphrases; all fixed. "Oldest operating lighthouse" confirmed by two independent publishers. Round 2 found "late 1990s" was itself an inference; now "an undated park brochure, written after 1996".'
+  - stage: approved
+    date: 2026-09-27
+    by: Eric
 ---
 
 Sandy Hook is a thin finger of sand at the northern end of the Jersey Shore, reaching up toward the entrance to New York Harbor. A National Park Service brochure describes it as a barrier beach about six and a half miles long. It forms the Sandy Hook Unit of Gateway National Recreation Area, a national park that also takes in parts of Brooklyn, Queens and Staten Island. [@nps-shifting-sands] [@nps-gateway-places]

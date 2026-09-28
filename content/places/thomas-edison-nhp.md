@@ -61,6 +61,9 @@ review:
     date: 2026-09-27
     by: Claude (separate verifier session)
     note: 'Round 1 found "a record that still stands" for 1,093 patents is outdated (both sources are years old and modern inventors hold more), so only the number stays; "developed" the camera overstated "worked on"; "another 40,000 items" was an unsupported inference; near-verbatim sentences; the pin sat between the two sites and was moved to the lab. Round 2 passed.'
+  - stage: approved
+    date: 2026-09-27
+    by: Eric
 ---
 
 Thomas Edison's laboratory survives as a cluster of red brick buildings on Main Street in West Orange, where it meets Lakeside Avenue. His family's estate, Glenmont, is nearby. The National Park Service now preserves both as Thomas Edison National Historical Park. [@nps-history] [@nps-faq]

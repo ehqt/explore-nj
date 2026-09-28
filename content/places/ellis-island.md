@@ -60,6 +60,9 @@ review:
     date: 2026-09-27
     by: Claude (separate verifier session)
     note: 'Round 1 found the writer''s own arithmetic presented as fact ("by most of its land, part of New Jersey"), an unsourced "best-known", a misreading that dated the Great Hall''s restored look to 1886, and close paraphrases of the opinion; all fixed. Round 2 found an unsourced "many people think" and an overstated special-master role; fixed with the verifier''s wording (Justice Breyer''s concurrence, in the cited opinion).'
+  - stage: approved
+    date: 2026-09-27
+    by: Eric
 ---
 
 Ellis Island lies in New York Harbor. By the Supreme Court's measure, it is 1,300 feet off the Jersey City shore and a mile from Manhattan's southern tip. From 1892 to 1924 it was, in the National Park Service's words, "America's largest and most active immigration station," where more than 12 million immigrants were processed. The park says millions of Americans have ancestors who came through it. [@scotus-1998] [@nps-history] [@nps-home]

@@ -48,6 +48,9 @@ review:
     date: 2026-09-27
     by: Claude (separate verifier session)
     note: 'Round 1 found a clause copied word for word, a close paraphrase of NJ.gov, a reported-speech quote presented as Browning''s own words, and "Browning''s claim" implying he claimed credit; all fixed. Round 2 passed.'
+  - stage: approved
+    date: 2026-09-27
+    by: Eric
 ---
 
 "Garden State" is the nickname New Jersey put on its license plates in the 1950s, and it shows up in names like the Garden State Parkway. Where it came from is less settled. [@njsl-slogan] [@nj-nickname] [@pl-2017-c214]

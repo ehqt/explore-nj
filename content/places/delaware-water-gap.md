@@ -76,6 +76,9 @@ review:
     date: 2026-09-27
     by: Claude (separate verifier session)
     note: 'Round 1 found the summary put the gap "at the heart" of the park (it is near the southern edge), unacknowledged acreage differences between sources, an opinion line, displacement wording implying it never happened, and close paraphrases; all fixed. Round 2 found "sand and gravel" for glacial deposits unsupported; fixed with the source''s terms.'
+  - stage: approved
+    date: 2026-09-27
+    by: Eric
 ---
 
 The Delaware Water Gap is a deep notch that the Delaware River has cut through Kittatinny Mountain, where the river forms the border between New Jersey and Pennsylvania. Mount Tammany stands on the New Jersey side and Mount Minsi on the Pennsylvania side. The gap is about a quarter mile wide at the water, nearly a mile wide from summit to summit, and roughly 1,200 feet deep. [@nps-water-gap] [@nps-geodiversity] [@usgs-epstein]
