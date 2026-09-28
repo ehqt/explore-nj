@@ -128,6 +128,10 @@ review:
     date: 2026-09-28
     by: Claude (separate verifier session)
     note: "Round 1 found the Census-geocoded pin on Dukes Parkway West (moved to the Farm Barn Orientation Center per OpenStreetMap), a quote used out of context, an overstated \"mission\", and several near-verbatim sentences; fixed. Round 2 passed."
+  - stage: approved
+    date: 2026-09-28
+    by: Eric
+    note: Pin from OpenStreetMap, approved by Eric.
 ---
 
 Duke Farms covers 2,700 acres on the banks of the Raritan River in Hillsborough. It was first the private estate of James Buchanan Duke, the tobacco industrialist whose name Duke University bears, and his daughter, Doris Duke, inherited control of it when he died. The Doris Duke Foundation now operates it as a center for conservation science and sustainability, which it calls "a living lab." [@ddf-center] [@ddf-founder] [@ddcf-2010] [@df-about]

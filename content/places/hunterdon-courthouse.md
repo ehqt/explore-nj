@@ -74,6 +74,9 @@ review:
     date: 2026-09-28
     by: Claude (separate verifier session)
     note: "Round 1 confirmed every trial fact against the 1935 and 1983 opinions; fixed a sentence that could read as the 1983 court confirming guilt (the dismissal was on legal grounds), restored the court's hedge on the jury's lodging, and removed an unsourced \"white\". Round 2 passed."
+  - stage: approved
+    date: 2026-09-28
+    by: Eric
 ---
 
 Flemington's columned courthouse went up in 1828 in the Greek Revival style. The National Register nomination for the Flemington Historic District places it at the corner of Main and Court Streets and calls it the town's first building in that style. It describes a "temple plan" building on a high stone foundation, fronted by a pedimented portico on round classical columns, with an eight-sided cupola above. [@nrhp-district]

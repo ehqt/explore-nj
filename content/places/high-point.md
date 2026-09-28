@@ -7,6 +7,9 @@ pillar: geography
 tags: [history]
 location: { lng: -74.6616, lat: 41.3209 }
 municipalities: ["3403747430", "3403776790"]
+open_to_public: true
+official_url: https://dep.nj.gov/parksandforests/state-park/high-point-state-park/
+volatile: true
 photo:
   file: high-point.jpg
   alt: A tall gray stone obelisk on top of a wooded hill, reflected in a lake in the foreground where a few people are swimming.
@@ -16,6 +19,12 @@ photo:
   source_url: https://commons.wikimedia.org/wiki/File:High_Point_Monument_and_Lake_Marcia.jpg
   modified: Resized and recompressed
 sources:
+  - id: dep-park
+    title: High Point State Park & New Jersey Veterans' Memorial
+    publisher: New Jersey Department of Environmental Protection
+    url: https://dep.nj.gov/parksandforests/state-park/high-point-state-park/
+    accessed: 2026-09-28
+    archive_url: https://web.archive.org/web/20260712055832/https://dep.nj.gov/parksandforests/state-park/high-point-state-park/
   - id: usgs-elevations
     title: "Elevations and Distances in the United States (online edition): Highest and Lowest Elevations"
     publisher: U.S. Geological Survey
@@ -61,7 +70,11 @@ review:
   - stage: second-pass
     date: 2026-09-28
     by: Claude (separate verifier session)
-    note: "Round 1 found a survey station described as present though reported missing in 2005, conflicting monument heights not flagged, \"by 1855 already\" overstated, and the nomination's acreage missing its 1969 deduction; fixed. Round 2 clarified the missing-disk report came from a member of the public. No \"Worth a visit?\": no readable current source shows the park open (the state's pages block automated reading)."
+    note: "Round 1 found a survey station described as present though reported missing in 2005, conflicting monument heights not flagged, \"by 1855 already\" overstated, and the nomination's acreage missing its 1969 deduction; fixed. Round 2 clarified the missing-disk report came from a member of the public. \"Worth a visit?\" added after Eric pointed to the state park page; it is cited from its July 2026 Wayback copy because the live page blocks automated reading, and a verifier checked it (one close paraphrase fixed)."
+  - stage: approved
+    date: 2026-09-28
+    by: Eric
+    note: Approved with the "Worth a visit?" section sourced from the state park page Eric provided.
 ---
 
 High Point is the top of New Jersey: no ground in the state rises higher. The summit is on Kittatinny Ridge in Sussex County, inside Montague Township, which lies in the state's northwest corner. A 1979 federal survey note placed it about 3.5 miles south-southeast of Port Jervis, New York, and roughly 3 miles from the point where the New Jersey, New York and Pennsylvania borders meet. [@usgs-elevations] [@nrhp-nomination] [@montague] [@ngs-ly2607]
@@ -79,3 +92,7 @@ In 1923 the Kuser family donated the land, and it became High Point State Park. 
 In 1996 the park was listed on the National Register of Historic Places as the High Point Park Historic District. Its nomination described the district as mountainous land atop Kittatinny Ridge in the northern parts of Wantage and Montague townships, about 11,300 acres, less 70 acres sold in 1969, with elevations from roughly 800 feet up to the summit. [@nrhp-nomination]
 
 The New York-New Jersey Trail Conference's trail guide says the monument offers a view in every direction, taking in the Delaware Water Gap and Pennsylvania to the south, the Poconos across the Delaware River to the west, and the Catskills about 70 miles to the north. The guide notes that the Appalachian Trail turns east off Kittatinny Ridge inside the park. Farther along the trail from the monument is Cedar Swamp, a mountaintop bog that the guide calls the most inland example of Atlantic white cedar, a tree normally found on the coastal plain. [@nynjtc-srt]
+
+## Worth a visit?
+
+Yes. The state park's page, as archived in July 2026, says visitors can walk the grounds around the monument, which it calls the New Jersey Veterans' Memorial, whenever the park itself is open, and that the monument's interior opens on a seasonal schedule as staffing permits. It also cautions that getting there in winter can hinge on the weather and the state of the roads. Check the official site for current hours, fees and alerts. [@dep-park]

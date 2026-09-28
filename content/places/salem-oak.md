@@ -68,6 +68,10 @@ review:
     date: 2026-09-28
     by: Claude (separate verifier session)
     note: "Round 1 found the county does not call the treaty story a legend (it says the oak \"is said to be\" the site), sources that differ on why the tree fell presented one-sided, and two close paraphrases; all fixed. Round 2 passed. Pin is the OpenStreetMap tree node inside the burial ground (the Census geocoder lands on the street)."
+  - stage: approved
+    date: 2026-09-28
+    by: Eric
+    note: Approved without outside review; relies on the Nanticoke Lenni-Lenape Tribal Nation's site and the Salem Friends' memorial, and presents the treaty only as tradition. Pin from OpenStreetMap, approved by Eric.
 ---
 
 The Salem Oak was a white oak that grew in the Salem Friends Burial Ground, the Quaker cemetery on Broadway in Salem City. It came down around 6 p.m. on June 6, 2019. Accounts of the cause differ: a member of the local Friends meeting told the Inquirer it was "stem failure," the city's history page says its roots gave way, and 6abc reported that the cause was unclear. The fallen trunk showed rot that had worked through it from the inside. [@inquirer-2019] [@pym-memorial] [@salem-city] [@wpvi-2019]

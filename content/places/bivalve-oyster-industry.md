@@ -66,6 +66,9 @@ review:
     date: 2026-09-28
     by: Claude (separate verifier session)
     note: "Round 1 found a 1944 review misdated as 1929, a truncated quote that changed its meaning, and a listing-date \"conflict\" the nomination's own certification settles (November 7, 1995); all fixed. Round 2 caught a comma splice and an unsourced \"up and down the coast\" in the rewrite; fixed."
+  - stage: approved
+    date: 2026-09-28
+    by: Eric
 ---
 
 Bivalve is a riverfront section of Commercial Township in Cumberland County, where the Maurice River runs out toward Delaware Bay. Rutgers University's shellfish lab calls it "the home port of the Delaware Bay oyster fleet." Here the Bayshore Center at Bivalve runs a museum inside oyster shipping sheds dating from 1904, and those sheds are the home port of its schooner, the A.J. Meerwald. The center describes the 1928 oyster schooner, which is New Jersey's official tall ship, as a "floating classroom." [@hsrl-history] [@bcb-history] [@bcb-home]

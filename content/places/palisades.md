@@ -71,6 +71,9 @@ review:
     date: 2026-09-28
     by: Claude (separate verifier session)
     note: "Round 1 found the cliffs described as only in Bergen County, the park's 200-million-year date applied to the cliffs rather than the rock, an unsourced \"large\" rockfall and close paraphrases; fixed. Round 2 narrowed the summary to the roughly 12 miles the park saved and reworded one more close paraphrase."
+  - stage: approved
+    date: 2026-09-28
+    by: Eric
 ---
 
 The Palisades are a line of steep cliffs along the west bank of the Hudson River in New Jersey and New York. The New Jersey section of Palisades Interstate Park, in Bergen County, takes in the cliffs, the riverfront below and uplands on top: a strip about 12 miles long and half a mile wide, covering roughly 2,500 acres and laced with more than 30 miles of trails. The park describes itself as "only minutes from midtown Manhattan." [@pipc-home] [@pipc-about] [@nhl-nomination]

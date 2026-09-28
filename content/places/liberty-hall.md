@@ -89,6 +89,10 @@ review:
     date: 2026-09-28
     by: Claude (separate verifier session)
     note: "Round 1 found \"lived and worked\" softened the museum's \"were made to\", and the 1972 nomination's \"freed his own two slaves\" presented as fact ahead of the museum's research; fixed, with the older view dated and set against Henry's self-emancipation. Round 2 caught the writer's own \"gentler\" judgement and a missing citation; fixed. Hard-history entry: shipping without outside review is Eric's decision."
+  - stage: approved
+    date: 2026-09-28
+    by: Eric
+    note: Approved without outside review; relies on the Liberty Hall Museum's own research on enslavement.
 ---
 
 Liberty Hall is a mansion museum in Union, and Kean University now sits on what was once its estate. The lawyer William Livingston bought 120 acres here in 1760, in what was then Elizabethtown, and over the following years laid out gardens and orchards and built a 14-room Georgian-style house. A 1972 National Park Service nomination dates the house to 1772–73. The land is part of Lënapehòkink, the homeland of the Lenape, and the museum notes that some Lenape people continue to live in the area. [@lh-history] [@kean-neh] [@nhl-1972] [@lh-land]

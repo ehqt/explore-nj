@@ -75,6 +75,9 @@ review:
     date: 2026-09-28
     by: Claude (separate verifier session)
     note: "Round 1 found an unsourced claim that Fenwick left the farm to his wife and appointed White (the widow owned it until 1911), a clause-by-clause paraphrase of the nomination, and an unnamed photographer who is named in the Library of Congress record; all fixed. Round 2 removed an unestablished year from the photo credit."
+  - stage: approved
+    date: 2026-09-28
+    by: Eric
 ---
 
 Whitesbog is a small farm village on sandy roads in Pemberton Township, ringed by pine forest, reservoirs, blueberry fields and cranberry bogs. The Whitesbog Preservation Trust, the nonprofit that looks after the village, counts about 3,000 acres around it and gives 1857 as the village's founding year. According to its National Register nomination (prepared in 1982), the State of New Jersey bought the 3,000-acre tract from the J.J. White Company in 1967 as an addition to Lebanon State Forest; the Trust now describes Whitesbog as part of Brendan T. Byrne State Forest. [@wpt-home] [@wpt-history] [@wpt-faq] [@nr-1982]

@@ -61,6 +61,9 @@ review:
     date: 2026-09-28
     by: Claude (separate verifier session)
     note: "Round 1 confirmed \"diner capital\" and \"most diners\" are attributed and the 2022 resolution is described as introduced, not law; fixed an approximate date stated as exact and four close paraphrases. Round 2 caught the rewrite dropping middle-class residents; fixed."
+  - stage: approved
+    date: 2026-09-28
+    by: Eric
 ---
 
 New Jersey is commonly called the "Diner Capital of the World." A joint resolution introduced in the state Senate in January 2022 opens with that phrase, and a 2021 National Register nomination uses a close cousin, "Diner Capital of America," for the crowded field of New Jersey diner builders in 1932. [@sjr32] [@aetna-nomination]

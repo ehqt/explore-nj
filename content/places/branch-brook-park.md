@@ -59,6 +59,10 @@ review:
     date: 2026-09-28
     by: Claude (separate verifier session)
     note: "Round 1 found the pin, averaged from the 1979 nomination's unverified UTM points, sitting on I-280 (moved inside the park at the old reservoir site), an unsourced \"famous\", a revision date presented as a hiring date, and two close paraphrases; all fixed. Round 2 passed. \"First county park\" and \"largest collection\" are attributed; the nomination was prepared by the Newark Cherry Blossom Festival."
+  - stage: approved
+    date: 2026-09-28
+    by: Eric
+    note: Pin from OpenStreetMap, approved by Eric.
 ---
 
 Branch Brook Park is a long, thin strip of parkland in Newark's North Ward, lying between the Forest Hill and Roseville neighborhoods, and a 1920s land gift carried its northern end into Belleville. Essex County puts it at 360 acres and nearly four miles from end to end, running from U.S. Route 280 in Newark up to Mill Street in Belleville, and roughly a quarter mile wide on average. The 1980 National Register nomination gave a shorter length of about two miles. The Newark Light Rail runs along the park's west side. [@ecp-about] [@ecp-faq] [@nr-1980]
