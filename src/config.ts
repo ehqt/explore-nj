@@ -2,9 +2,11 @@
 
 /**
  * Google Form for correction reports, with {subject} and {url} placeholders for
- * prefilled fields. Empty until Eric creates the form; the link is hidden until then.
+ * prefilled fields. Responses go to the form's linked spreadsheet, which Eric checks.
+ * Set to '' to hide the "Report a correction" link.
  */
-export const CORRECTIONS_FORM_URL: string = '';
+export const CORRECTIONS_FORM_URL: string =
+  'https://docs.google.com/forms/d/e/1FAIpQLSdt3pAMj4LumX4NbUhubLYlXm7PYoON9q-GZB2Dl2Qet9xQmQ/viewform?usp=pp_url&entry.44199726={subject}&entry.488158316={url}';
 
 export const SOURCES = {
   censusBoundaries: 'https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html',
