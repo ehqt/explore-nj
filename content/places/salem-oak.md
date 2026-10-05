@@ -53,9 +53,9 @@ sources:
   - id: nlltribe
     title: Nanticoke Lenni-Lenape Tribal Nation (home page)
     publisher: Nanticoke Lenni-Lenape Tribal Nation
-    url: https://nlltribe.com/
+    url: https://www.nlltribalnation.org/
     accessed: 2026-09-28
-    archive_url: https://web.archive.org/web/20230707014507/https://nlltribe.com/
+    archive_url: https://web.archive.org/web/20261002053341/https://www.nlltribalnation.org/
 review:
   - stage: drafted
     date: 2026-09-28
