@@ -119,6 +119,9 @@ review:
     date: 2026-10-04
     by: Claude (separate verifier session)
     note: "Round 1: Light bulb not overstated; \"first research lab\" attributed to two publishers; conflicting dates credited correctly; Henry Ford record matches; pin on the tower. Fixed: \"buildings gone by 1925\" contradicted Ford moving two surviving buildings; the April 1878 date for the \"Wizard\" nickname was an inference across two sources (dropped); several near-verbatim sentences; \"his museum\" unsourced. Round 2: \"Stop\" on the railroad unsourced (now \"hamlet on the railroad line\"); otherwise passed."
+  - stage: approved
+    date: 2026-10-05
+    by: Eric
 ---
 
 Thomas Edison's Menlo Park laboratory stood in what is now Edison Township. Today the site is marked by a museum, the Thomas Edison Center at Menlo Park, and a memorial tower topped by an enormous light bulb, in the 36-acre Edison State Park. The state's Division of Parks and Forestry, Edison Township and a nonprofit, the Edison Memorial Tower Corporation, run the center and the park together. [@nps-faq] [@mp-commemorative] [@mp-exhibits] [@mp-about]

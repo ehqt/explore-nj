@@ -83,6 +83,10 @@ review:
     date: 2026-10-04
     by: Claude (separate verifier session)
     note: "Round 1: All engineering figures confirmed; \"longest and highest plane\" backed by two publishers; closure matches the current county listing; dated sources handled. Fixed: five close paraphrases (charter, hinged boats, obsolescence, the Lees, the greenway); the summary called the cradle cars themselves water-powered. Round 2: The round-1 rewrite generalised the summit-as-dam from Plane 9 West to \"each plane\" and added \"raised\"; fixed."
+  - stage: approved
+    date: 2026-10-05
+    by: Eric
+    note: 'Approved to ship while the museum is closed for repairs.'
 ---
 
 The Morris Canal once ran 102 miles across northern New Jersey, from Phillipsburg on the Delaware River to Jersey City on the Hudson. Its company was chartered in 1824. The plan was to bring Pennsylvania coal east, and the route crossed New Jersey's iron-mining country. The first trip from Newark to Phillipsburg was made on November 4, 1831, and the line reached Jersey City in 1836. [@csnj-canal] [@nr-nomination]

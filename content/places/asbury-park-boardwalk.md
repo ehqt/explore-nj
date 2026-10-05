@@ -87,6 +87,9 @@ review:
     date: 2026-10-04
     by: Claude (separate verifier session)
     note: "Round 1: Music claims attributed and not overstated (the Pony itself says Springsteen didn't start there); closure and restoration match the city; 1929 vs 1930 credited. Fixed: the \"official\" boardwalk website is the private operator's, now named as such; the construction schedule dropped the city's \"at the developer's own risk\" and \"following board approval\"; closed complex includes more buildings; \"Monmouth County\" uncited; two close paraphrases. Round 2: The round-1 suggestion added \"within a few years\" and \"for bathers\"; fixed."
+  - stage: approved
+    date: 2026-10-05
+    by: Eric
 ---
 
 Asbury Park's oceanfront is what the city calls a "mile of sand and water," and its boardwalk is home to music, restaurants, shops, mini golf, playgrounds and a splash park. The website of AP Boardwalk, the privately owned and operated venues and shops on the boardwalk, dates the city to 1871, when manufacturer James Bradley founded it as a "seaside residential resort," and says that soon afterward a boardwalk followed, with a pier, a pavilion for an orchestra and public changing rooms. [@city-beach] [@apb-about]

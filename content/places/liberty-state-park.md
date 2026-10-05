@@ -66,6 +66,9 @@ review:
     date: 2026-10-04
     by: Claude (separate verifier session)
     note: "Round 1: Wayback-sourced and January 2026 claims dated; two causes for the 1967 shutdown attributed; \"largest ever built\" attributed; pin on the terminal. Fixed: \"made land\" for the whole park was an inference; the shed being off-limits was true only as of January 2026; two present-tense claims rested on the 1975 nomination; two close paraphrases of the park page. Round 2: Two round-1 rewrites overreached (\"set aside\" by the department; all immigrants rather than many); fixed with the verifier's wording."
+  - stage: approved
+    date: 2026-10-05
+    by: Eric
 ---
 
 Liberty State Park lines the Jersey City shore of the Hudson River, with the Statue of Liberty, Ellis Island and the Manhattan skyline across the water. The state's Department of Environmental Protection calls it "a green oasis in the heart of Metropolitan northern New Jersey." The two-mile Hudson River Waterfront Walkway joins the Nature Center, two picnic and playground areas and the old Central Railroad of New Jersey (CRRNJ) Terminal, which stands at the park's north end. [@dep-park]

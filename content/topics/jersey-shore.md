@@ -72,6 +72,9 @@ review:
     date: 2026-10-04
     by: Claude (separate verifier session)
     note: "Round 1: Poll figures, the badge rules, the 2024 county spending shares and the veto quote confirmed; no prices. Fixed: \"many beaches require badges\" and \"often costs money\" rested on a 2008 poll (now \"towns may charge\", \"can cost money\"); a near-verbatim copy of the 2002 fact sheet; \"commonly call\" now tied to the polls' usage. Round 2: PASS."
+  - stage: approved
+    date: 2026-10-05
+    by: Eric
 ---
 The state's beach communities are commonly called "the shore," or the Jersey Shore, and Monmouth University's polls use both names. When the Monmouth University Polling Institute asked residents in 2011 to name a favorite Jersey Shore town, the answers included Sandy Hook, Long Branch, Long Beach Island, Atlantic City, Ocean City, the Wildwoods and Cape May. [@monmouth-2011]
 

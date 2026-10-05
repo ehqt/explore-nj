@@ -127,6 +127,9 @@ review:
     date: 2026-10-04
     by: Claude (separate verifier session)
     note: "Round 1: PASS: founder family, conflicting sculpture and visitor counts, dated 2007/2014 sources, building uses on current pages, attributed \"largest representation\", sculpture-free photo and pin all confirmed. Two optional edits applied (financing sentence reworded; township visitor figure dated). Round 2: The optional edits added \"early\" and a wrong date range; fixed with the verifier's wording."
+  - stage: approved
+    date: 2026-10-05
+    by: Eric
 ---
 
 Grounds For Sculpture is a sculpture park, museum and arboretum covering 42 acres in Hamilton Township, the Mercer County town near Trenton. It sits on what used to be the New Jersey State Fairgrounds and opened to the public in 1992. Contemporary sculpture is set out across its gardens, while six indoor galleries host exhibitions that change over time. The park is run as a nonprofit. [@gfs-mission] [@gfs-about] [@hamilton-visit] [@njhof]

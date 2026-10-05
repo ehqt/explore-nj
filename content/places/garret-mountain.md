@@ -74,6 +74,9 @@ review:
     date: 2026-10-04
     by: Claude (separate verifier session)
     note: "Round 1: Geology, acreage figures (575 vs 310, each credited), Wayback dating, municipalities including Clifton (geography only) and pin confirmed. Fixed: a close paraphrase of the county castle page; \"accepted in 1976\" loose; the archived plan for the county to run the museum restated in the past tense so it does not imply who runs it now (no current source says). Round 2: PASS."
+  - stage: approved
+    date: 2026-10-05
+    by: Eric
 ---
 
 Garret Mountain is part of the Watchung Mountains, the chain of ridges that also holds the Great Falls in Paterson. The National Park Service explains that lava flows formed these ridges, a result of the breakup of the supercontinent Pangaea, and it dates the flow that includes the falls to roughly 190 million years ago. Quarries once cut traprock, a name for the basalt, from the edges of these ridges, including in what is now Woodland Park. [@nps-geology]

@@ -85,6 +85,9 @@ review:
     date: 2026-10-04
     by: Claude (separate verifier session)
     note: "Round 1: Geology (2007 NJGS article, dated), jetport story, \"first wilderness on Interior land\" (two independent publishers), Johnson quotes, conflicting acreages, pin and municipalities confirmed. Fixed: 3,750 acres was credited to Wilderness Connect, whose own figure is 3,660; \"federal money\" generalised the Migratory Bird Fund; three close paraphrases. Round 2: The round-1 suggestion added \"small\" wood-lots; removed."
+  - stage: approved
+    date: 2026-10-05
+    by: Eric
 ---
 
 Great Swamp National Wildlife Refuge lies in Morris County, about 26 miles west of Times Square. The U.S. Fish and Wildlife Service, which runs it, calls the refuge a 12-square-mile "natural oasis" in a mostly suburban area. Its own pages disagree on the size, giving 7,853 acres on one page and 7,768 on another. Inside are grasslands, brushlands, mature forest, forested wetlands, marsh, ponds and streams. [@fws-home] [@fws-about]

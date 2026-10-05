@@ -83,6 +83,10 @@ review:
     date: 2026-10-04
     by: Claude (separate verifier session)
     note: "Round 1: Geometry re-created byte-for-byte from the TIGER 2025 \"Barnegat Bay\" polygon (public domain, Census credited); area figures credited correctly; Wayback claims dated; Hudson naming attributed. Fixed: an unattributed \"only three inlets\" contradicted by the Coast Pilot (Beach Haven Inlet), now both given; the map caption now says the shape excludes Manahawkin Bay and Little Egg Harbor; the half-foot tide was widened from the Intracoastal Waterway to all inland waters; two close paraphrases. Round 2: The round-1 suggestion added \"lasting\" and \"salt water\" (source: brackish tidal water); fixed."
+  - stage: approved
+    date: 2026-10-05
+    by: Eric
+    note: 'Approved with the Census TIGER/Line 2025 "Barnegat Bay" polygon as the map shape.'
 ---
 
 Barnegat Bay is a shallow estuary on the New Jersey coast, with the mainland along its western edge and barrier islands between it and the Atlantic Ocean to the east. Island Beach State Park sits on one of those islands, north of Barnegat Inlet; as archived in August 2026, the park's page described 10 miles of "narrow barrier island" with the ocean on one side and the bay on its west. South of the inlet lies Long Beach Island, whose northern tip is the borough of Barnegat Light. [@usgs-ds937] [@ibsp] [@noaa-cp-ch5] [@boro-history]
