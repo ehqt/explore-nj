@@ -90,6 +90,9 @@ review:
     date: 2026-10-05
     by: Claude (separate verifier session)
     note: "Round 1: \"Largest park\" attributed; acreage and 1850 population conflicts credited; geology and Lenape name attributed; municipalities and pin confirmed. Fixed: the Sensory Friendly Trail is under construction per the county's current page; two close paraphrases. Round 2: PASS."
+  - stage: approved
+    date: 2026-10-05
+    by: Eric
 ---
 
 Watchung Reservation is a wooded Union County park, and the county describes it as its largest. It lies along the First and Second Watchung Mountains, with the valley of the Blue Brook between them, and it stretches three miles in length and one mile across. County pages give different figures for its size, among them 2,065 acres on Trailside's welcome page and 2,142 acres on its trails page. [@uc-camp-2026] [@uc-adopt-trail] [@trailside-welcome] [@trailside-trails]

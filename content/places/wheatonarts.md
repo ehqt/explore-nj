@@ -75,6 +75,9 @@ review:
     date: 2026-10-05
     by: Claude (separate verifier session)
     note: "Round 1: Company history, collection counts (each credited), Sandburg 1904 passage, exhibition dates and photo confirmed. Fixed: the pin sat on Glasstown Road (moved to the Museum of American Glass); \"first successful glass factory\" was credited to the Historical Commission, which only used the phrase annotating an outside website (now WheatonArts and the Philadelphia encyclopedias \"most successful\"); two close paraphrases. Round 2: PASS (optional style tweak applied)."
+  - stage: approved
+    date: 2026-10-05
+    by: Eric
 ---
 
 WheatonArts is an arts campus on 45 wooded acres in Millville, Cumberland County. At its heart is the Museum of American Glass, and the grounds also hold the Down Jersey Folklife Center and studios for hot glass, flamework and pottery, where artists demonstrate glassmaking and pottery for visitors. [@wa-visit] [@wa-about] [@wa-studios]

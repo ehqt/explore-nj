@@ -90,6 +90,9 @@ review:
     date: 2026-10-05
     by: Claude (separate verifier session)
     note: "Round 1: History, USDA 2022 figures, pin and photo confirmed. Fixed: the summary read \"New Jersey State Fair\" like an official title (now the fair's trademarked name); undated or loosely dated archived claims; two near-verbatim sentences. Round 2: The round-1 rewrite implied visitors may touch animals (the page asks them to keep hands out of pens) and overstated dairy (\"dominated\", \"helped along\"); fixed."
+  - stage: approved
+    date: 2026-10-05
+    by: Eric
 ---
 
 The Sussex County Fairgrounds, on Plains Road in Augusta, spread over more than 150 acres and hold over 25 permanent buildings. A nonprofit, the Sussex County Farm and Horse Show Association, runs the grounds and plans the fair held there; its executive board and directors are all volunteers, and the association says the grounds get no money from government. The fair goes by two names at once, the New Jersey State Fair and the Sussex County Farm and Horse Show, and the state Department of Agriculture lists it among New Jersey's agricultural fairs as the "Sussex County Fair." [@fair-mission] [@fair-history] [@njda-fairs]

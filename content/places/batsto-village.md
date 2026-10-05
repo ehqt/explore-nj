@@ -72,6 +72,10 @@ review:
     date: 2026-10-05
     by: Claude (separate verifier session)
     note: "Round 1: Facts, conflicting dates (iron's end; 1954 vs 1955), pin and photo confirmed. Fixed: Wayback-sourced DEP claims undated; the guide's \"pushed out\" quote implied the Lenape were gone, so a present-tense line about the Nanticoke Lenni-Lenape Tribal Nation was added with its own source; several near-verbatim sentences; superlative now quoted exactly. Round 2: A round-1 edit made \"that page\" point to the wrong source for Camden; the tribal nation's site moved, so its URL and archive were updated (also in the live Salem Oak entry)."
+  - stage: approved
+    date: 2026-10-05
+    by: Eric
+    note: "Approved without outside review; relies on the Batsto Citizens Committee, state sources and the Nanticoke Lenni-Lenape Tribal Nation's own site."
 ---
 
 Batsto Village is in Wharton State Forest, in the Pine Barrens of Burlington County. Its ironworks dates to 1766, and the Batsto Citizens Committee credits Charles Read with founding it on the Batsto River. The spot had what iron making needed: bog ore dug from the banks of streams, forest wood to burn into charcoal, and water for power. The ironworks turned out household goods such as cooking pots and kettles, and the 1970 National Register nomination lists "pigs," water pipe and stoves among its products. During the Revolutionary War it supplied George Washington's Continental Army; the state parks department's page, as archived in June 2026, names cannons and cannonballs among those supplies, and the Pinelands Commission says the 1778 Battle of Chestnut Neck, near Port Republic, was fought during a failed British campaign to destroy the Batsto ironworks. [@bcc-history] [@nr-1970] [@dep-wharton] [@pc-history]

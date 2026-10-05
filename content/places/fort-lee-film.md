@@ -71,6 +71,9 @@ review:
     date: 2026-10-05
     by: Claude (separate verifier session)
     note: "Round 1: Every \"birthplace\" or \"center\" claim attributed; timeline credited correctly (Micheaux 1919 vs 1920); cliffhanger attributed; public-domain photo and pin confirmed. Fixed: two close paraphrases (the 1910s boom, the end of Fox in Fort Lee); \"film\" laboratories unsourced; alt text now says sepia. Round 2: PASS."
+  - stage: approved
+    date: 2026-10-05
+    by: Eric
 ---
 
 Fort Lee is a Bergen County borough just across the Hudson River from New York City. Its film museum, the Barrymore Film Center, says that "before Hollywood became synonymous with moviemaking," Fort Lee was "the hub of the emerging American film industry," and calls it "the birthplace of American cinema." The borough's website uses similar words: "the birthplace of the motion picture industry in America." A New Jersey Historical Commission classroom guide makes the case for the state as a whole, saying motion pictures were invented and first produced at Thomas Edison's laboratory and studio in West Orange, and calls Fort Lee the film town "once hailed as the center of the U.S. motion picture industry." [@bfc-museum] [@bfc-about] [@fortlee-borough] [@njhc-lesson]

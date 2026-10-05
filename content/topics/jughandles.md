@@ -72,6 +72,9 @@ review:
     date: 2026-10-05
     by: Claude (separate verifier session)
     note: "Round 1: \"Signature\", \"most of any state\" and \"only state\" attributed and dated; self-service law matches the current statute (the April 2026 \"repeal\" post was a joke and is not mentioned); 1960 brochure and 2013 bill accurate; no prices or penalties. Fixed: the FHWA study results lacked their limits (2007 brief, limited sample, more rear-end crashes, comparable or slightly higher travel times); one close paraphrase of the design manual. Round 2: PASS."
+  - stage: approved
+    date: 2026-10-05
+    by: Eric
 ---
 
 At a New Jersey "jughandle," the left lane is not where a left turn starts. The state transportation department's design manual defines a jughandle as an "at-grade ramp" at or between intersections that lets drivers make "indirect left turns and/or U-turns." Drivers peel off to the right, either before reaching the cross street or just after it, and the ramp brings them back to a signal where they cross the highway. New Jersey Monthly summed it up as a design that makes drivers "turn right in order to turn left." [@njdot-rdm] [@njm-2014]

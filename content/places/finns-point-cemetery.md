@@ -64,6 +64,10 @@ review:
     date: 2026-10-05
     by: Claude (separate verifier session)
     note: "Round 1: Conflicting figures each credited; 1978 and 2012 sources dated; monument and inscription described factually; pin and photo confirmed. Fixed: the summary put the dead \"beneath\" the obelisk, which no source says; one close paraphrase. Round 2: The round-1 suggestion said the sign \"blames\" disease on these factors (sign: \"contributed to\"); fixed."
+  - stage: approved
+    date: 2026-10-05
+    by: Eric
+    note: "Approved without outside review; relies on the VA's own history and the Fort Delaware Society."
 ---
 
 Finn's Point National Cemetery lies in Pennsville Township, about six miles northwest of Salem, next to Fort Mott State Park and surrounded by national wildlife refuge land. About a mile away, on Pea Patch Island in the Delaware River, is Fort Delaware. The cemetery holds Confederate prisoners of war who died at that fort during the Civil War, along with Union soldiers who also died there, many of them prison guards. [@va-cemetery] [@va-stewardship] [@va-sign-cemetery]

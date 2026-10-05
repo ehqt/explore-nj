@@ -74,6 +74,9 @@ review:
     date: 2026-10-05
     by: Claude (separate verifier session)
     note: "Round 1: Summit facts and outcome balanced (no agreements; upbeat views attributed; \"dead center\" from the Office of the Historian); builder and architect attributed; pin and photo confirmed. Fixed: the datestone wording rested only on the 1971 nomination; the 2003 restoration was linked to the painting find without a source; two near-verbatim sentences. Round 2: PASS (optional style tweak applied)."
+  - stage: approved
+    date: 2026-10-05
+    by: Eric
 ---
 
 Hollybush is a stone house on the campus of Rowan University in Glassboro. Rowan says Thomas Whitney, of the family that founded the Whitney Brothers Glassworks in 1842, built it after a tour of Europe. A 1971 nomination to the National Register of Historic Places records a datestone on the tower inscribed "Thomas H. Whitney A.D. 1849," names John Notman as the architect, and calls the house "an excellent example" of the Italian Villa style. [@rowan-mansion] [@nr-nomination]

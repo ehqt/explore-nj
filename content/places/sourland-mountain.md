@@ -79,6 +79,10 @@ review:
     date: 2026-10-05
     by: Claude (separate verifier session)
     note: "Round 1: Geology credited to the 2015 guide; \"largest contiguous forest\" attributed; acreages credited; Black history matches the museum's pages; municipalities, pin and photo confirmed. Fixed: the summary implied a present-day Black community and hid the forced relocation; the Maple Flats notice dated to 2025 had been up since mid-2024; \"the same guide\" pointed to the wrong source; a missing citation; four close paraphrases. Round 2: Three round-1 rewrites overreached (\"in place\", \"its members\", \"since mid-2024\" from uncited captures); fixed."
+  - stage: approved
+    date: 2026-10-05
+    by: Eric
+    note: "Approved without outside review; relies on the Stoutsburg Sourland African American Museum."
 ---
 
 Sourland Mountain is a long, wooded ridge in central New Jersey. Its steep eastern end, in Hillsborough and Montgomery townships, looks out over the flatter Piedmont; from there a chain of ridges and hills heads west through Hopewell and the Amwells and comes down to the Delaware River at Lambertville. The Sourland Conservancy describes the 90-square-mile region as holding "the largest contiguous forest in Central New Jersey," a mix of forest, wetlands and grasslands. [@living-sourlands] [@conservancy-home]

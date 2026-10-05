@@ -70,6 +70,10 @@ review:
     date: 2026-10-05
     by: Claude (separate verifier session)
     note: "Round 1: Date conflicts credited correctly (1973 nomination read from page images). Fixed: the quarry is on the Spruce Run, not the South Branch; the quarry's transfer to the museum has two accounts, now both given; \"Worth a visit?\" now notes the museum's own pages contradict each other; the 1994 district description attributed; Irishtown is the upper street; close paraphrases. Round 2: A comma typo and two missing citations from the round-1 rewrite; the hours contradiction is on the same pages, not \"other pages\"; fixed."
+  - stage: approved
+    date: 2026-10-05
+    by: Eric
+    note: "Approved with \"Worth a visit?\" kept, including the check-first note about the museums conflicting open status."
 ---
 
 The Red Mill Museum Village covers 10 acres in Clinton, Hunterdon County, on the west bank of the South Branch of the Raritan River. Its centerpiece is the Red Mill, which the mill's 1973 National Register nomination described as a four-story wooden mill beside the river, next to a dam. The grounds also hold a quarry, with its office and stone crusher and sorter, plus a schoolhouse, a log cabin and a working blacksmith shop. The museum describes the site as part of Lenapehoking, the traditional territory of the Lenni-Lenape people. [@rm-home] [@rm-history] [@nr-mill-1973]
