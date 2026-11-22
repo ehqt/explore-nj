@@ -283,8 +283,11 @@ export function loadContent(): LoadResult {
       }
 
       // Review history must move forward through the stages, and approval is a person's job.
+      // After an approval, a re-check may start a new round (e.g. when facts change); that
+      // round needs its own second pass before it can be approved again.
       const stages = meta.review.map((r) => r.stage);
       for (let i = 1; i < stages.length; i++) {
+        if (stages[i - 1] === 'approved') continue;
         if (STAGE_ORDER.indexOf(stages[i]) < STAGE_ORDER.indexOf(stages[i - 1])) {
           err(`review stages go backwards: "${stages[i - 1]}" then "${stages[i]}"`);
         }
@@ -297,7 +300,8 @@ export function loadContent(): LoadResult {
         }
       }
       const stage = stages[stages.length - 1];
-      if (stage === 'approved' && !stages.includes('second-pass')) err('approved without a second-pass stage');
+      const lastRound = stages.slice(stages.lastIndexOf('approved', stages.length - 2) + 1);
+      if (stage === 'approved' && !lastRound.includes('second-pass')) err('approved without a second-pass stage');
 
       // Sources and citations.
       const sourceIds = new Set<string>();
