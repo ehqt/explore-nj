@@ -6,7 +6,7 @@ import 'maplibre-gl/dist/maplibre-gl.css';
 import './style.css';
 import type { FeatureCollection } from 'geojson';
 import { countyCard, entryCard, jersey101Card, townCard } from './cards';
-import { loadData, type AppData } from './data';
+import { dataUrl, loadData, type AppData } from './data';
 import type { BBox } from './lib/geo';
 import { BASEMAP_STYLE_URL, FALLBACK_STYLE, MAX_BOUNDS, NJ_BOUNDS } from './map-config';
 import { addEntryLayers, ENTRY_LAYERS } from './map/entry-layers';
@@ -211,6 +211,7 @@ function wireInteractions(map: maplibregl.Map, data: AppData, panel: Panel): voi
       box: historyBox,
       otherLegend: document.getElementById('legend'),
       hideLayers: Object.values(ENTRY_LAYERS),
+      dataUrl,
     });
   }
   createTour({ data, stops: data.tour, panel, show: (sel) => show(sel), onShow: (l) => showListeners.push(l) });

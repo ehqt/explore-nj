@@ -576,12 +576,6 @@ body {
   color: var(--color-muted);
 }
 
-.history-metric {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.2rem 0.8rem;
-  margin: 0.4rem 0;
-}
 
 .history-year {
   display: block;
@@ -663,4 +657,57 @@ body {
 
 .history-table td {
   text-align: right;
+}
+
+.history-metric {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin: 0.4rem 0;
+}
+
+.history-metric select {
+  font: inherit;
+  padding: 0.25rem;
+}
+
+.measures-scroll {
+  overflow-x: auto;
+}
+
+.measures-table {
+  border-collapse: collapse;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.measures-table th,
+.measures-table td {
+  padding: 0.15rem 0.4rem;
+  text-align: right;
+  font-weight: normal;
+}
+
+.measures-table tbody th {
+  text-align: left;
+  padding-left: 0;
+}
+
+.measures-table thead th {
+  color: var(--color-muted);
+}
+
+.measures-table td.flagged {
+  color: var(--color-muted);
+}
+
+.birthplace {
+  padding-left: 1.1rem;
+  margin: 0.3rem 0;
+}
+
+.swatch--dot {
+  border-radius: 50%;
+  width: 0.7rem;
+  height: 0.7rem;
 }

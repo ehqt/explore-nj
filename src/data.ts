@@ -3,7 +3,7 @@
 
 import type { FeatureCollection } from 'geojson';
 import type { BBox, Position } from './lib/geo';
-import type { PopulationHistory } from './history';
+import type { DotsIndex, HistoryData, Measures, PopulationHistory } from './history';
 
 export interface Town {
   name: string;
@@ -92,7 +92,7 @@ export interface AppData {
   /** Entry ids of the "Start here" tour, in order. */
   tour: string[];
   /** Town populations by decade (Then & Now). Missing if the file failed to load; the rest still works. */
-  history?: PopulationHistory;
+  history?: HistoryData;
 }
 
 export const dataUrl = (path: string) => `${import.meta.env.BASE_URL}data/${path}`;
@@ -112,9 +112,11 @@ export async function loadData(): Promise<AppData> {
     getJson<BoundaryMeta>('boundaries/meta.json'),
     getJson<{ stops: string[] }>('tour.json'),
   ]);
-  const history = await getJson<PopulationHistory>('history/population.json').catch((err) => {
-    console.error(err);
-    return undefined;
-  });
+  const [population, measures, dots] = await Promise.all([
+    getJson<PopulationHistory>('history/population.json').catch((err) => (console.error(err), undefined)),
+    getJson<Measures>('history/measures.json').catch((err) => (console.error(err), undefined)),
+    getJson<DotsIndex>('history/dots/dots.json').catch((err) => (console.error(err), undefined)),
+  ]);
+  const history = population ? { population, measures, dots } : undefined;
   return { towns, aliases, counties, entries, meta, tour: tour.stops, history };
 }
