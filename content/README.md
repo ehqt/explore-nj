@@ -56,6 +56,7 @@ The full list of fields and what each means is in `schema/entry.schema.json`.
 - coordinates and shapes fall inside New Jersey (catches swapped longitude and latitude)
 - `related` entries exist, and an approved entry never links to an unapproved one
 - review stages go in order: `drafted` → `source-checked` → `second-pass` → `approved`
+  (after an approval, a re-check such as `source-checked` may start a new round, which needs its own `second-pass` and `approved`; until then the entry is off the site)
 - the second pass isn't done by the drafting session, and only a person can approve
 
 Only entries whose last stage is `approved` appear on the site.
