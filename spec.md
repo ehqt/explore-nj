@@ -140,6 +140,42 @@ These are technical fixes with a clear right answer, so they were adopted withou
 - **Measuring usefulness:** no analytics, so correction reports and tester feedback are the measure.
 - **Maintenance:** Eric owns the app. Scheduled jobs open GitHub issues for broken links, entries due for re-checking, and a yearly municipal-merger check. Eric can hand any of them to Claude.
 
+## v1.1: Railroads (proposed 2026-11-22, not yet approved)
+
+Eric asked on 2026-11-22 to add two rail layers to Explore NJ, going through the normal content pipeline. A separate site, `ehqt/nj-rail`, covers how today's trains actually run (schedules, capacity, the commute into Manhattan); Explore NJ covers where the railroads came from and who holds them now. This section narrows the v1 rule "Out of v1: practical/civic info (transit, services)": the rail layers are history and geography, not service information, so they never show schedules, fares, stations-as-trip-planning or service alerts.
+
+**Layers**
+- A single **Railroads** toggle in the map's layer control, off by default, with two views:
+  - **Then: who built it ("ghost railroads").** Today's lines and notable abandoned ones, colored by the railroad that built or ran them before the 1976 Conrail merger and NJ TRANSIT's takeover (e.g. Delaware, Lackawanna & Western; Erie; Central Railroad of New Jersey; Pennsylvania Railroad; Reading; Pennsylvania-Reading Seashore Lines; Lehigh Valley). The exact list is set with the content and sources.
+  - **Now: who owns and runs it.** The same network colored by today's owner (Amtrak, NJ TRANSIT, Conrail Shared Assets, other freight railroads) with the passenger operator noted (NJ TRANSIT, Amtrak, PATH, PATCO, SEPTA); the final list is set with the sources.
+- Clicking a line opens a feature panel for that railroad (Then view) or a short owner card (Now view).
+- Rail lines sit below pins, features and towns in click precedence; they never block a town or county click.
+- A legend explains the colors; colors come from a colorblind-safe palette and are labeled, not color-only.
+
+**Entries**
+- One **feature** entry per predecessor railroad: who built it, when, what it carried, what survives (lines, stations, bridges, place names), and which of today's lines follow it. Pillar: history.
+- One **Jersey 101 topic**, "Who runs New Jersey's railroads," explaining the Now view: owners vs. operators, Conrail, why Amtrak owns the Northeast Corridor, and links to `nj-rail` for how service works.
+- Optional **places** for surviving landmarks (e.g. historic terminals and bridges), chosen with the content and subject to the usual "Worth a visit?" rules.
+- All of these follow the existing fact-checking, verifier and approval rules unchanged.
+
+**Geometry**
+- Preferred source: OpenStreetMap railway data (`railway=rail`, `abandoned`, `disused`, with `operator`/`owner` tags), ODbL, credited like the Pinelands outline. It includes abandoned lines, which transit data does not.
+- NJ TRANSIT's GTFS route shapes are used only if NJT's developer agreement is confirmed to allow publishing derived shapes (open question, see the `nj-rail` README).
+- Which railroad built which segment is a historical claim, so each segment's attribution needs a source like any other fact; segments that can't be sourced are drawn in a neutral "unattributed" style rather than guessed.
+- The usual geometry rules apply: WGS84, simplified with mapshaper, documented in `content/geometry/README.md`, inside the payload budget.
+
+**Open questions for Eric**
+1. Is a layer toggle acceptable? v1 has no toggles; this would be the first.
+2. Should "Then" be one era (the eve of the 1976 Conrail merger) or show change over time? One era is far simpler and is the proposal here.
+3. How far into abandoned lines should it go: only lines a newcomer can still see traces of (rail trails, surviving stations), or every documented one?
+4. Who exports the OpenStreetMap data? Claude's workspace can't reach OpenStreetMap, so Eric would download it (Claude can prepare the exact query).
+
+**Build order**
+1. Approve this section (answering the open questions).
+2. Content pilot: one railroad feature (suggested: DL&W, whose lines include the Montclair-Boonton and Morris & Essex) plus the "Who runs" topic, through the full pipeline.
+3. Geometry and the toggle UI.
+4. Remaining railroads in one batch.
+
 ## Review decisions log (all 16 decided with Eric on 2026-09-26)
 1. **How non-point content works:** three entry kinds. **Places** are pins. **Features** are areas and lines drawn on the map (Pinelands, Highlands, Delaware River, Palisades, barrier islands). **Topics** have no location (pork roll/Taylor ham, diners, the Jersey attitude); they live in a searchable "Jersey 101" section, are linked from relevant panels, and have optional "see it here" links to places.
 2. **Region scheme:** no clickable regions. Counties are the only clickable areas at state zoom. The Pinelands and Highlands are features with their official boundaries. North/Central/South Jersey appear as soft labels that open a Jersey 101 topic, which also mentions the six official tourism regions.
