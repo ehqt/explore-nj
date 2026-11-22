@@ -52,6 +52,20 @@ state table. The build fails if any source row can't be placed or if towns don't
 published county and state totals (beyond a few small inconsistencies in the state table itself,
 which are listed in the output).
 
+### Phase 2: town measures and who lives here
+
+```sh
+sh scripts/history/fetch-phase2.sh    # NHGIS town tables + 2010 block groups (needs IPUMS_API_KEY)
+sh scripts/history/fetch-phase2b.sh   # NHGIS race/ethnicity on block groups + 1970/1980 tract maps
+npm run history:measures              # public/data/history/measures.json
+npm run history:dots                  # public/data/history/dots/ (one dot per 50 residents)
+```
+
+NHGIS needs a free IPUMS account; put its API key in your shell as `IPUMS_API_KEY` (never in the
+repo). Survey (ACS) values whose coefficient of variation is above 30% are flagged as too uncertain
+and greyed out on the map. Data from IPUMS NHGIS (Manson et al., IPUMS National Historical Geographic
+Information System, Minneapolis, MN: IPUMS).
+
 ## Licenses
 
 Code: MIT. Written content: CC BY 4.0. Images keep their own licenses. See [LICENSE](LICENSE).
