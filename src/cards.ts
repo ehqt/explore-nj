@@ -5,6 +5,7 @@ import { distanceKm, inPolygon, type PolygonGeometry, type Position } from './li
 import { PILLARS, pillarSvg } from './pillars';
 import { CORRECTIONS_FORM_URL, SOURCES } from './config';
 import { strings } from './strings';
+import { historySources, townHistoryHtml } from './history';
 
 export function escapeHtml(text: string): string {
   return text.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]!);
@@ -85,8 +86,9 @@ export function townCard(data: AppData, id: string): { title: string; html: stri
     <h2 class="card-title" tabindex="-1">${escapeHtml(town.name)}</h2>
     <p class="card-fact"><strong>${formatNumber(town.population)}</strong> ${strings.residents2020}${town.population_note ? `<br><span class="card-muted">${escapeHtml(town.population_note)}</span>` : ''}</p>
     ${places}
+    ${data.history ? townHistoryHtml(data.history, id) : ''}
     <p>${external(town.wikipedia, strings.readMoreWikipedia(town.name))}</p>
-    ${sourcesList([...censusSources(), `${external(town.wikipedia, strings.wikipediaArticle(town.name))}, Wikipedia`])}
+    ${sourcesList([...censusSources(), ...(data.history ? historySources(data.history) : []), `${external(town.wikipedia, strings.wikipediaArticle(town.name))}, Wikipedia`])}
     ${correctionLink(`${town.name} (${county.name})`, location.href)}
   `;
   return { title: town.name, html };

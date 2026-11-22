@@ -531,3 +531,136 @@ body {
 .header-button[hidden] {
   display: none;
 }
+
+/* Then & Now */
+.header-button[aria-pressed='true'] {
+  background: var(--color-brand);
+  color: #fff;
+}
+
+.history {
+  position: absolute;
+  left: 0.75rem;
+  bottom: 2.5rem;
+  z-index: 2;
+  width: min(18rem, calc(100vw - 1.5rem));
+  background: rgb(255 255 255 / 0.95);
+  border-radius: 8px;
+  padding: 0.6rem 0.8rem;
+  font-size: 0.8rem;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 0.15);
+}
+
+.history[hidden] {
+  display: none;
+}
+
+.history-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.history-title {
+  margin: 0;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.history-close {
+  border: 0;
+  background: none;
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--color-muted);
+}
+
+.history-metric {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 0.8rem;
+  margin: 0.4rem 0;
+}
+
+.history-year {
+  display: block;
+}
+
+.history-year-value {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-brand);
+}
+
+.history-year input {
+  width: 100%;
+}
+
+.history-state,
+.history-note {
+  margin: 0.2rem 0;
+  color: var(--color-muted);
+}
+
+.history-legend-title {
+  margin: 0.4rem 0 0.2rem;
+  font-weight: 600;
+}
+
+.history-legend {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.15rem 0.6rem;
+}
+
+.history-legend li {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.swatch {
+  display: inline-block;
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 2px;
+  border: 1px solid rgb(0 0 0 / 0.15);
+  flex: none;
+}
+
+.history-chart {
+  width: 100%;
+  max-width: 22rem;
+  height: auto;
+  font-size: 10px;
+  fill: var(--color-muted);
+}
+
+.history-chart rect {
+  fill: var(--color-brand);
+}
+
+.history-chart rect.est {
+  fill: #7b9cc0;
+}
+
+.history-table table {
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.history-table th,
+.history-table td {
+  text-align: left;
+  padding: 0.1rem 0.8rem 0.1rem 0;
+  font-weight: normal;
+}
+
+.history-table td {
+  text-align: right;
+}

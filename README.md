@@ -35,6 +35,23 @@ County and municipal boundaries, 2020 populations and Wikipedia links are built 
 results are committed in `public/data/boundaries/`. Rerun it when the Census publishes
 new boundaries; `npm run validate:boundaries` (also in CI) checks the files agree.
 
+## Then & Now (population history)
+
+Town populations by decade, 1940–2020, plus the latest Census estimate, mapped onto today's 564
+municipalities. The data is built from public sources and committed in `public/data/history/`:
+
+```sh
+sh scripts/history/fetch.sh   # downloads the sources into .cache/history/ (one time)
+npm run history               # builds public/data/history/population.json
+```
+
+Sources: NJ Department of Labor, *New Jersey Population Trends 1790 to 2000* (Table 6, 1940–2000);
+U.S. Census Bureau 2010 and 2020 counts and Vintage 2025 subcounty estimates. Renamed, merged and
+dissolved towns are mapped in `scripts/history/crosswalk.ts`, along with one corrected typo in the
+state table. The build fails if any source row can't be placed or if towns don't add up to the
+published county and state totals (beyond a few small inconsistencies in the state table itself,
+which are listed in the output).
+
 ## Licenses
 
 Code: MIT. Written content: CC BY 4.0. Images keep their own licenses. See [LICENSE](LICENSE).

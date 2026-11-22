@@ -3,6 +3,7 @@
 
 import type { FeatureCollection } from 'geojson';
 import type { BBox, Position } from './lib/geo';
+import type { PopulationHistory } from './history';
 
 export interface Town {
   name: string;
@@ -90,6 +91,8 @@ export interface AppData {
   meta: BoundaryMeta;
   /** Entry ids of the "Start here" tour, in order. */
   tour: string[];
+  /** Town populations by decade (Then & Now). Missing if the file failed to load; the rest still works. */
+  history?: PopulationHistory;
 }
 
 export const dataUrl = (path: string) => `${import.meta.env.BASE_URL}data/${path}`;
@@ -109,5 +112,9 @@ export async function loadData(): Promise<AppData> {
     getJson<BoundaryMeta>('boundaries/meta.json'),
     getJson<{ stops: string[] }>('tour.json'),
   ]);
-  return { towns, aliases, counties, entries, meta, tour: tour.stops };
+  const history = await getJson<PopulationHistory>('history/population.json').catch((err) => {
+    console.error(err);
+    return undefined;
+  });
+  return { towns, aliases, counties, entries, meta, tour: tour.stops, history };
 }
