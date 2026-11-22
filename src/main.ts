@@ -11,6 +11,7 @@ import type { BBox } from './lib/geo';
 import { BASEMAP_STYLE_URL, FALLBACK_STYLE, MAX_BOUNDS, NJ_BOUNDS } from './map-config';
 import { addEntryLayers, ENTRY_LAYERS } from './map/entry-layers';
 import { addBoundaryLayers, LAYERS, showSelection, TOWN_ZOOM } from './map/layers';
+import { addHistoryLayer, createHistoryControl } from './history';
 import { PILLARS, pillarSvg } from './pillars';
 import { pathFor, sameSelection, selectionFromPath, type Selection } from './router';
 import { createSearch } from './search';
@@ -199,6 +200,19 @@ function wireInteractions(map: maplibregl.Map, data: AppData, panel: Panel): voi
     });
   }
   renderLegend(document.getElementById('legend'));
+  const historyButton = document.getElementById('history-button') as HTMLButtonElement | null;
+  const historyBox = document.getElementById('history');
+  if (data.history && historyButton && historyBox) {
+    historyButton.textContent = strings.historyButton;
+    createHistoryControl({
+      map,
+      history: data.history,
+      button: historyButton,
+      box: historyBox,
+      otherLegend: document.getElementById('legend'),
+      hideLayers: Object.values(ENTRY_LAYERS),
+    });
+  }
   createTour({ data, stops: data.tour, panel, show: (sel) => show(sel), onShow: (l) => showListeners.push(l) });
 
   // Open whatever the address points at (a shared link, or a prerendered page).
@@ -246,6 +260,7 @@ if (container) {
       try {
         const data = await dataReady;
         await addBoundaryLayers(map, data);
+        if (data.history) addHistoryLayer(map, LAYERS.townLine);
         addEntryLayers(map, data);
         document.getElementById('prerendered')?.remove();
         wireInteractions(map, data, panel);

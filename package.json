@@ -14,7 +14,8 @@
     "content": "node scripts/build-content.ts",
     "check-links": "node scripts/check-links.ts",
     "boundaries": "node scripts/build-boundaries.ts",
-    "validate:boundaries": "node scripts/validate-boundaries.ts"
+    "validate:boundaries": "node scripts/validate-boundaries.ts",
+    "history": "node scripts/history/build-population.ts"
   },
   "dependencies": {
     "maplibre-gl": "^6.11.2"
