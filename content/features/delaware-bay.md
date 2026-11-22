@@ -74,6 +74,9 @@ review:
     date: 2026-11-21
     by: Claude (separate verifier session)
     note: "Round 1: geometry reproduced byte-for-byte from the three TIGER 2025 \"Delaware Bay\" polygons; the horseshoe crab superlative is backed by USGS, the Partnership and the basin commission; Coast Pilot claims checked against the November 2026 edition. Fixed: the Cape May refuge's \"Copper River Delta\" ranking is no longer on its live page, so it and its source were dropped; the Coast Pilot title named an edition that matched neither the live file nor the archive; three close paraphrases. Round 2: \"the New Jersey shoreline\" could mean the ocean coast, now \"the bay's New Jersey shore\"; \"labs\" was unsourced."
+  - stage: approved
+    date: 2026-11-22
+    by: Eric
 ---
 
 Delaware Bay meets the Atlantic Ocean through an entrance about 10 miles wide, with Cape May on its northeast side and Cape Henlopen, in Delaware, on its southwest side. NOAA's Coast Pilot calls the bay "an expansion of the lower part of Delaware River," and says the bay and river together divide New Jersey, to the east, from Delaware and Pennsylvania, to the west. Where the river stops and the bay starts was fixed "arbitrarily" by the legislatures of Delaware and New Jersey: a line 42 miles above the capes, drawn from a monument on Liston Point, Delaware, to a matching monument on the south side of Hope Creek's entrance in New Jersey. [@noaa-cp-ch6] [@pde-estuary]

@@ -80,6 +80,10 @@ review:
     date: 2026-11-22
     by: Claude (separate verifier session)
     note: "Round 1: \"largest freshwater lake\" is attributed to the 2001 law and the DEP plan, with the museum as an independent second source; the 11-foot and 12-foot figures are each attributed; the drawdown schedule matches the Commission's current page; the geometry reproduced byte-for-byte. Fixed: the shape left out the Census \"Davis Cv\" polygon, about a third of the lake's water along the Borough of Hopatcong; it now joins the main polygon, and the README command was updated and re-run; four close paraphrases. Round 2: a sentence saying the DEP treats Davis Cove as one of the lake's coves overstated an ice-monitoring list and was removed, and \"long been failing\" went back to the act's \"for some time\"."
+  - stage: approved
+    date: 2026-11-22
+    by: Eric
+    note: "Approved with the shape including the Census Davis Cv polygon."
 ---
 
 Lake Hopatcong lies in both Morris and Sussex counties, and four municipalities share it: the boroughs of Hopatcong and Mount Arlington and the townships of Jefferson and Roxbury. A 2024 plan from the New Jersey Department of Environmental Protection (DEP) puts it at roughly nine miles long, with 38 miles of shoreline and 2,658 acres of water at its normal level. In the 2001 law that set up the Lake Hopatcong Commission, the Legislature found it to be "the largest freshwater lake in the State," and the DEP plan says the same; the Lake Hopatcong Historical Museum calls it "New Jersey's largest lake." The shape on this map joins the water that the Census Bureau's 2025 map files label "Lk Hopatcong," almost all of it in Morris County, with the adjoining Sussex County water that the Census labels "Davis Cv." [@dep-wlmp] [@lh-act] [@museum-about] [@tiger-morris] [@tiger-sussex]

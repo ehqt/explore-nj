@@ -108,6 +108,10 @@ review:
     date: 2026-11-22
     by: Claude (separate verifier session)
     note: "Re-check after the November 7 reopening. Round 1: the entry frames November 7 as a plan, since no source confirms the actual reopening day; nothing recommends the closed marsh campus; the temporary site and its trails, gardens and shop match the Institute's home page and FAQ. Fixed: summary and first sentence implied the center still operates on the marsh; a near-verbatim phrase; the town name was attributed to the wrong page. Round 2: \"for rebuilding\" overstated a proposed building, now the trail-raising the sources describe; \"has been flooding\" overstated \"vulnerable to flooding\", now quoted exactly. Open for Eric: open_to_public is true for the temporary site while the pin stays on the closed campus."
+  - stage: approved
+    date: 2026-11-22
+    by: Eric
+    note: "Approved after the November 2026 re-check, with open_to_public kept for the temporary site."
 ---
 
 The Wetlands Institute is a nonprofit center for research, conservation and education whose home campus is set in the salt marsh along Stone Harbor Boulevard. Its mailing address says Stone Harbor, but the land is in Middle Township, and the Institute's zoning approvals for its rebuilding plans came from the Middle Township Zoning Board. A salt marsh, as NOAA defines it, is a coastal wetland that the tides flood with salt water and then drain. [@twi-contact] [@twi-history] [@twi-faqs] [@noaa-saltmarsh]

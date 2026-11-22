@@ -69,6 +69,9 @@ review:
     date: 2026-11-22
     by: Claude (separate verifier session)
     note: "Round 1: the shape rebuilds byte-for-byte from the three TIGER 2025 polygons and leaves out the separately mapped rivers; the Coast Pilot, Harbor & Estuary Program, DEP and Census definitions of the bay are each attributed; the 2016 report is in the past tense; the shellfish classifications are dated to the January 2026 DEP archive; EPA Superfund facts match its November 2026 page. Fixed: an undated present-tense shellfish claim; \"held responsible\" overstated the EPA's \"potentially responsible\"; a close paraphrase of the Coast Pilot's ice passage. Round 2: the rewrites added \"warns\", \"pile\" and \"cleansed\" (relay is not cleansing in the source); returned to the sources' terms."
+  - stage: approved
+    date: 2026-11-22
+    by: Eric
 ---
 
 Raritan Bay and Sandy Hook Bay both belong to Lower Bay, which NOAA's Coast Pilot defines as the part of New York Harbor reaching from Sandy Hook west to the Raritan River and north to The Narrows. The dividing point between the two, in the Coast Pilot's descriptions, is Point Comfort, where Keansburg sits. West of it is Raritan Bay, with Staten Island to the north; the Raritan River flows into its western end between Perth Amboy and South Amboy, and Perth Amboy occupies the point where that river meets the Arthur Kill. East of Point Comfort is Sandy Hook Bay, with Sandy Hook on its eastern side. [@noaa-cp2-ch11]

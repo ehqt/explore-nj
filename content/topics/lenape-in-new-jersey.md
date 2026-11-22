@@ -111,6 +111,10 @@ review:
     date: 2026-11-22
     by: Claude (separate verifier session)
     note: "Round 1: names, dialect groups, Brotherton, the federal and state recognitions, the 2018 and 2019 settlements and the Historical Commission plan checked against each nation's pages and the state's records; terminology respectful. Fixed: recognition status undated; the 1980 and 1982 recognition dates conflicted silently; the Brotherton accounts (self-supporting or not; Oneida or New Stockbridge hosts) disagree and now both are given; the GAO allegation was turned into a direct statement by the state; the Nation's own account was stated as fact; the cited Ramapough website no longer exists and nothing established it as official; three close paraphrases. Round 2: \"speaks through more than one organization\" was unsourced, and the clan towns were not on the cited page, both removed; \"casino gaming\" restored to \"casino gaming rights\"."
+  - stage: approved
+    date: 2026-11-22
+    by: Eric
+    note: "Approved without outside review; relies on the nations' own pages (Delaware Tribe, Delaware Nation, Nanticoke Lenni-Lenape Tribal Nation, Powhatan Renape Nation), the Attorney General's 2018 and 2019 settlements, the Commission on American Indian Affairs and the Historical Commission's 2023 plan."
 ---
 
 People lived in what is now New Jersey for thousands of years before Europeans came, and New Jersey's state archaeologist says archaeological sites statewide show people living here as far back as 12,000 years. The Lenape homeland is spelled Lenapehöking in the state archaeologist's presentation and Lënapehòkink by Liberty Hall Museum. When Europeans arrived, the Nanticoke Lenni-Lenape Tribal Nation says, its Lenape ancestors were the people of New Jersey, Delaware, eastern Pennsylvania and southern New York. [@njdoe-lattanzi] [@lh-land] [@nll-about]

@@ -62,6 +62,9 @@ review:
     date: 2026-11-22
     by: Claude (separate verifier session)
     note: "Round 1: the 88 municipalities match N.J.S.A. 13:20-7a and the council's list; the shape rebuilds byte-for-byte from the README command and the text says it is the Act's town-based region, not a geologic line; geology, the 2004 findings and the 2008 plan's acreage are attributed and dated; the Act section is neutral. Fixed: the summary mixed the landform with the legal region; the council's current figures were undated; the Preservation Area boundary list read as complete; two close paraphrases. Round 2: \"softer\" and \"ice age\" changed the plan's own terms; now \"more easily eroded\" and \"most recent glaciation\"."
+  - stage: approved
+    date: 2026-11-22
+    by: Eric
 ---
 
 The New Jersey Highlands is a stretch of hills, ridges and valleys across the north of the state. As the Highlands Council describes it, the region reaches from the Delaware River in Warren and Hunterdon counties to the New York border along the northern edges of Sussex, Passaic and Bergen counties, and covers about 1,300 square miles. The council lists 88 municipalities in parts of seven counties: Bergen, Hunterdon, Morris, Passaic, Somerset, Sussex and Warren. [@hc-about] [@hc-local]

@@ -76,6 +76,10 @@ review:
     date: 2026-11-21
     by: Claude (separate verifier session)
     note: "Round 1: battle facts, Mercer's death at the Clarke House on January 12, the Mercer Oak's fall in 2000 and the NHL date all match sources; the state page is read from its August 2026 Wayback copy and dated; no casualty figures (sources conflict); pin inside the Clarke House outline. Fixed: \"a mile southwest of Princeton University\" blended three sources (now a mile south of the town, per the society); five close paraphrases; \"see the Mercer Oak\" contradicted its fall. Round 2: \"bought\" overstated \"acquired\"; \"young\" oak was unsourced; \"grown from it\" implied a sprout from the stump. All fixed."
+  - stage: approved
+    date: 2026-11-22
+    by: Eric
+    note: "Approved without outside review; relies on the state park page, the Princeton Battlefield Society, the American Battlefield Trust and the 1975 National Historic Landmark nomination."
 ---
 
 The open lawns of Princeton Battlefield State Park lie about a mile south of the town of Princeton. On the morning of January 3, 1777, American soldiers led by George Washington fought and defeated British forces here, on land that was then the farms of two Quaker brothers, William and Thomas Clarke. The state's park page, as archived in August 2026, says the battle is "considered to be one of the fiercest fights of its size during the American Revolution." [@abt-battle] [@pbs-battle] [@dep-park]

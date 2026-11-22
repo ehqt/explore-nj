@@ -60,6 +60,9 @@ review:
     date: 2026-11-22
     by: Claude (separate verifier session)
     note: "Round 1: the shape rebuilds byte-for-byte from the FWS realty query and covers the parcels the Service holds, not the larger acquisition boundary; the municipalities match a clip against the project's boundaries; the differing founding dates and acreages (FWS 1990 and 7,500 acres, USGS 1991 and 4,500) are each attributed; 2009 plan figures and the \"only refuge\" Appalachian Trail claim are dated; the arsenic study is in the past tense. Fixed: two near-verbatim USGS sentences and three close paraphrases; the 7,500 acres explained as the original acquisition boundary. Round 2: the rewrites had added unsourced details (\"string of\", \"who needed the water\", \"long\", \"low\", \"faded\", \"intact\"), all returned to the sources' own terms."
+  - stage: approved
+    date: 2026-11-22
+    by: Eric
 ---
 
 The Wallkill rises at the outlet dam of Lake Mohawk in Sussex County and flows north; the U.S. Geological Survey (USGS) traces it through Franklin Pond and through wetlands, across the New York line, and on to the Hudson River. The Fish and Wildlife Service's 2009 plan for the refuge traces that route to the Hudson near Kingston, New York, by way of Rondout Creek. The USGS puts the river's watershed at about 208 square miles of Sussex County. By the USGS's account, some 4.5 miles past Franklin Pond the river leaves bedrock behind and broadens across glacial outwash, and it crosses the refuge before reaching the state line. [@usgs-arsenic] [@fws-ccp]

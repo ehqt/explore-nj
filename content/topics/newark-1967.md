@@ -90,6 +90,10 @@ review:
     date: 2026-11-22
     by: Claude (separate verifier session)
     note: "Round 1: every number, name and quote matched the Lilley report (OJP/NCJRS copy), the Kerner report and the news and library sources; the conflicting accounts of John Smith's arrest are presented as unresolved; 26 and 23 deaths are each attributed; the naming dispute is attributed. Fixed: commissions dated by their 1968 reports; Kerner's \"either refused or was unable to walk\" quoted; the order of the first night corrected (Molotov cocktails, then the march, then rocks); close paraphrases; the possibility of organized sniping added for balance; cut from 1,422 to about 950 words. Round 2: cuts had removed balance; restored Spina's doubt about sniping, the uncertain origin of the shot that killed Toto, the 24 Black and 2 white dead, and the hospital figure that undercuts the 725 injured; the withdrawal now follows Lilley's timing; the Lilley causes now include all four it named; \"evidence of\" prejudice restored."
+  - stage: approved
+    date: 2026-11-22
+    by: Eric
+    note: "Approved without outside review; relies on the 1968 Lilley and Kerner reports, Rutgers-Newark, the Newark Public Library, NPR, WNYC, WBGO and the ACLU of New Jersey."
 ---
 
 The events in Newark in July 1967 go by more than one name. The state and federal commissions whose reports came out in 1968 wrote of "civil disorders" and "the Newark riot." Amiri Baraka, the poet and playwright, who was present, called it a rebellion rather than a riot, and in a 2017 WNYC profile the lawyer and activist Junius Williams called it "the Rebellion." The Newark Public Library named its 50th-anniversary exhibit "Voices from the Rebellion." In 2017 Newark's mayor, Ras Baraka, Amiri Baraka's son, said the language people use for those days shows "how far off people are in their interpretation of the events." [@lilley-report] [@kerner-report] [@npr-baraka] [@npr-hill] [@wnyc-williams] [@npl-voices]

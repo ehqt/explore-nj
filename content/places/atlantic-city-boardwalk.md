@@ -90,6 +90,9 @@ review:
     date: 2026-11-21
     by: Claude (separate verifier session)
     note: "Round 1: \"first boardwalk\" backed by two independent publishers and attributed; Monopoly's disputed origin gives both views; casino history neutral; present-tense claims rest on 2026 Visit Atlantic City pages; pin on the Boardwalk at Park Place. Fixed: an eight-word phrase copied without quotation marks; the Toy Hall of Fame URL had died (moved to museumofplay.org, with archive); the Miss America paragraph ended on a \"permanent new home\" that implied the pageant is still there. Round 2: the new Miss America sentence ended on its 2013 return, which again implied the present; reworded to the 2006–2013 Las Vegas years only."
+  - stage: approved
+    date: 2026-11-22
+    by: Eric
 ---
 
 The Atlantic City Boardwalk is a wooden promenade running along the beach in Atlantic City. It began in 1870 as a practical fix: by Visit Atlantic City's account, it was originally built "to keep sand out of hotel lobbies and train cars." The city's public library and its tourism bureau both describe it as the first boardwalk in the United States. [@vac-boardwalk-history] [@acfpl-faq]

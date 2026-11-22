@@ -117,6 +117,9 @@ review:
     date: 2026-11-22
     by: Claude (separate verifier session)
     note: "Round 1: founding, Bamberger building, collection figures and Ballantine House facts match the museum's pages, the 1984 landmark nomination and the NPS list; superlatives are attributed; pin inside the museum building. Fixed: the summary settled the house's disputed 1884/1885 date; Dana was called a librarian on a source that doesn't say so; the Rutgers guide was called undated but is dated; a link between Dana and the museum's firsts was an inference; a near-verbatim phrase; the Ballantine paragraph was moved so the section no longer opens on description. Round 2: \"Gilded Age\", \"grand\" and \"ringing\" were unsourced; replaced with the sources' own terms."
+  - stage: approved
+    date: 2026-11-22
+    by: Eric
 ---
 
 The Newark Museum of Art sits at 49 Washington Street in downtown Newark, across Washington Park from Broad Street. John Cotton Dana, who also led the Newark Public Library, established it in 1909, and the museum still describes its founding idea as "radical among museums in 1909": that art and learning are for everyone. [@nmoa-visit] [@nmoa-dana] [@nmoa-about]
