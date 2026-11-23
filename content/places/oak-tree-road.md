@@ -82,6 +82,10 @@ review:
     date: 2026-11-23
     by: Claude (separate verifier session)
     note: "Round 1: the community is described through Woodbridge Township's plan and mayor's address, a 2024 public-television documentary, a Rutgers student magazine, the parade organizers and township-wide ACS 2020-2024 figures; \"Little India\" is attributed as a label; pin on Oak Tree Road at Correja Avenue. Fixed: the history skipped the late-1980s vandalism and bias incidents the documentary covers, now added from it; close paraphrases of the township plan and improvement-district page; the parade direction conflicted with the 2026 report; the plan's 2018 date. Round 2: the bias-incident sentence reversed the NAACP leader's account (he says officials were at first slow to act) and said \"teenage\" for \"juveniles\"; \"making\" implied a cause the plan doesn't state; a missing citation. hard_history set because of the bias incidents. No Edison Township or county source: their sites block automated reading."
+  - stage: approved
+    date: 2026-11-23
+    by: Eric
+    note: "Approved without outside review; relies on the 2024 PBS documentary Destination Oak Tree Road, Woodbridge Township's plan and mayor's address, and the India Day Parade organizers."
 ---
 
 Oak Tree Road runs through Edison Township and into Iselin, a section of Woodbridge Township. A 2024 public-television documentary describes the mile-and-a-half stretch from Edison Township to Iselin as "the heart, the hub" of a "thriving Indian American and South Asian American business and professional community." A 2024 article in Kairos, the undergraduate magazine of Rutgers University's journalism department, says the area is "often dubbed 'Little India'" for its long strip of businesses owned by South Asians, and a speaker in the documentary's opening montage uses the same name. [@pbs-destination] [@kairos-2024]

@@ -77,6 +77,9 @@ review:
     date: 2026-11-23
     by: Claude (separate verifier session)
     note: "Round 1: every fact, the pin and the photo credit confirmed; Island Beach is not a National Natural Landmark, and the entry makes no such claim. Fixed: close paraphrases of the DEP and nature-program pages; DEP claims undated; \"world's first\" missile claim needed quotation marks; \"volunteers help build\" rested on one planting; \"ties to\" overstated the partnership's hedge on menhaden. Round 2: the Hudson sentence still copied its source, and reordering the Phipps paragraph left the resort plan without an owner; both reworded."
+  - stage: approved
+    date: 2026-11-23
+    by: Eric
 ---
 
 Island Beach State Park covers a thin barrier island that runs 10 miles between the Atlantic Ocean and Barnegat Bay, which lies on its west side. The New Jersey Department of Environmental Protection, in its park page as archived in October 2026, describes the island as "shaped by storms and tides." By the department's account, more than 3,000 acres and 10 miles of coastal dunes here "remain almost untouched" since 1609, when Henry Hudson described the New Jersey coast from his ship, the Half Moon. [@dep-park]

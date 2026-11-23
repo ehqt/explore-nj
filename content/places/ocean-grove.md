@@ -118,6 +118,9 @@ review:
     date: 2026-11-23
     by: Claude (separate verifier session)
     note: "Round 1: founding, street plan, Auditorium, tents, register dates and architecture match the nomination, HPO list and Association and Historical Society pages; tone neutral. Fixed: the pavilion paragraph lacked the opinion's context (the pavilion's uses and the basis of the Association's suit) and ended on a probable-cause finding that read like an outcome; the Celmer acquittals needed their reason; seating figures and the founding account attributed page by page; \"largest assemblage\" overstated the Historical Society; a guided-tour schedule looked out of date. Round 2: a comma splice; the parties' dispute over secular rentals added; wording fixes. Pass."
+  - stage: approved
+    date: 2026-11-23
+    by: Eric
 ---
 
 Ocean Grove is a seaside town in Neptune Township, Monmouth County, lying between Wesley Lake and Fletcher Lake on the Atlantic coast, just south of Asbury Park. Its centerpiece is the Great Auditorium, a wooden hall opened in 1894; the town's 1975 National Register nomination says Ocean Grove "literally grew up around the Auditorium." [@nr-nomination] [@hsog-about] [@neptune-og] [@ogcma-history]

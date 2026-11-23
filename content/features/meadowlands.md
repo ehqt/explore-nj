@@ -100,6 +100,10 @@ review:
     date: 2026-11-23
     by: Claude (separate verifier session)
     note: "Round 1: the NWI wetlands shape rebuilds byte-for-byte from the README query and commands, and the text says plainly what it is (estuarine intertidal marsh inside the 14 towns, north of a line near the Pulaski Skyway, about 4,000 acres, with both NWI imagery dates); history, landfills, the 2015 merger and every conflicting figure are attributed; EPA claims dated. Fixed: the 1968 and 1969 dates were framed as a conflict, but the law dates from 1968, took effect in January 1969 and the commission formed that year; a close paraphrase of the EPA release; the master plan's adoption date could not be confirmed. Round 2: pass, with a dangling \"study area\" reference fixed."
+  - stage: approved
+    date: 2026-11-23
+    by: Eric
+    note: "Approved with the National Wetlands Inventory marsh shape."
 ---
 
 The Hackensack Meadowlands are the tidal marshes along the lower Hackensack River in Bergen and Hudson counties, inside the New York-Newark metropolitan area. In 1976 a U.S. Geological Survey report counted about 23 square miles of tidal marsh, "commonly referred to as the Hackensack Meadows," reaching 10 miles up the river from Newark Bay, and called that marsh largely undeveloped. A 2002 U.S. Fish & Wildlife Service report called the Meadowlands "perhaps the largest urban wetland complex in the northeastern United States," and the state agency that plans the area calls them "the largest remaining complex of brackish tidal wetlands in the New York and New Jersey Harbor Estuary." [@usgs-1976] [@fws-trends-2002] [@njsea-mp2020]

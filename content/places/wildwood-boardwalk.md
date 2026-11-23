@@ -137,6 +137,9 @@ review:
     date: 2026-11-23
     by: Claude (separate verifier session)
     note: "Round 1: history, motel counts and register dates match the motels documentation, the Caribbean nomination and the state list; the district's status (a SHPO opinion only, while the league says officially recognized) is given both ways; conflicting boardwalk lengths, start dates and \"widest\" claims attributed; the construction closure is dated; pin and CC0 photo confirmed. Fixed: the summary said the motels are mostly in Wildwood Crest (they are in all three towns); the alt text misdescribed the lanes; a close paraphrase of the league. Round 2: pass."
+  - stage: approved
+    date: 2026-11-23
+    by: Eric
 ---
 
 The Wildwoods are three resort towns, Wildwood, North Wildwood and Wildwood Crest, on a barrier island off the southern New Jersey coast in Cape May County. Their boardwalk runs north from Cresse Avenue to 15th Avenue in North Wildwood, a stretch the regional tourism authority counts as 38 blocks. Along it the authority lists three amusement piers with more than 100 rides and attractions, three water parks by the beach, arcades, carnival games, shops, restaurants and a yellow tramcar. Its pages give the length two ways: "almost 2.5 miles" in one place and 1.85 miles in another. [@nr-mpdf] [@gw-boardwalk] [@gw-general]

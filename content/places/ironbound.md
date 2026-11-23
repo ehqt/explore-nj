@@ -79,6 +79,9 @@ review:
     date: 2026-11-23
     by: Claude (separate verifier session)
     note: "Round 1: the community is described only through the Ironbound Community Corporation, the business district, the Portugal Day organizers and the library's dated 1996-97 columns, with their loaded characterizations left out; the three accounts of the name are each attributed; figures are attributed to current pages; pin on Ferry Street; photo credit confirmed. Fixed: \"nonprofit\" unsupported on the cited pages; four close paraphrases; alt text placed the apartment building beside the church. Round 2: the rewrites added \"has not left\", \"large wave\", \"takes over\" and an unstated June 10 date for Portugal Day; returned to the sources' wording. No City of Newark source: its site blocks automated reading."
+  - stage: approved
+    date: 2026-11-23
+    by: Eric
 ---
 
 Just east of downtown Newark, near Penn Station, is the neighborhood called the Ironbound. The Ironbound Community Corporation, a community organization founded in 1969, traces its edges as Penn Station and the Amtrak line on the west, the Passaic River on the north, Routes 1 and 9, the New Jersey Turnpike and Port Newark on the east, and Highway 78 and Newark Airport on the south. By the corporation's count, the neighborhood covers four square miles, takes in most of the city's East Ward council district, and has about 50,000 residents. Its other name, "Down Neck," comes from part of the area sitting on a neck of the Passaic River, according to the history published by the Ironbound Business Improvement District. [@ibid-home] [@icc-overview] [@icc-community] [@ibid-history]

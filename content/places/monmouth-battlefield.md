@@ -114,6 +114,10 @@ review:
     date: 2026-11-23
     by: Claude (separate verifier session)
     note: "Round 1: casualties, temperatures, the result and Lee's removal are each attributed; Molly Pitcher is framed as legend against Martin's account; the people the Craigs enslaved are described accurately from the state page and the Friends brochure; pin and photo confirmed. Fixed: \"western Monmouth County\" unsourced; the Craig House hours omitted the snapshot's \"closed for the rest of the season\"; several close paraphrases; cut from about 1,300 to 895 words. Round 2: the cuts implied only three farmhouses stood in 1778 (three of seven survive), made the 1,818 acres read as a 1975 figure, dropped von Steuben taking Lee's troops and the Trust's \"some evidence\" for Mary Hays, and undated the Molly Pitcher visitor line; all restored."
+  - stage: approved
+    date: 2026-11-23
+    by: Eric
+    note: "Approved without outside review; relies on the state park page, the American Battlefield Trust and the Friends of Monmouth Battlefield."
 ---
 
 On Sunday, June 28, 1778, George Washington's Continental Army fought the British army of Sir Henry Clinton across the fields, woodlots and swamps west of the village then called Monmouth Courthouse, now the town of Freehold. A 1975 landmark nomination noted that the heaviest fighting took place on ground inside what was then a new state park; the American Battlefield Trust now puts the park at 1,818 acres. [@fomb-fact-sheet] [@abt-heat] [@nhl-nomination] [@abt-visit]

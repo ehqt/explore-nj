@@ -79,6 +79,9 @@ review:
     date: 2026-11-23
     by: Claude (separate verifier session)
     note: "Round 1: geology, elevations and the 2012 trail mileage match the NJGS circular, USGS captions and NPS pages, each dated. Fixed: the first shape (PAD-US public lands) was only about 27 percent crest rock and took in the Delaware valley, so it was replaced with the USGS SGMC Shawangunk Formation outline, which rebuilds byte-for-byte; a paragraph repeated the Delaware Water Gap entry; three close paraphrases. Round 2: \"reaches the surface\" was wrong for a bedrock map, now \"as the bedrock\" with glacial cover noted; \"passage\" was not the Park Service's word; the README now notes the dataset's intended scale."
+  - stage: approved
+    date: 2026-11-23
+    by: Eric
 ---
 
 Kittatinny Mountain, which the New Jersey Geological Survey calls "a broad even-crested ridge," runs through New Jersey's Valley and Ridge Province, the first of the state's four physiographic provinces the Survey lists going from northwest to southeast. The Survey's circular, prepared in 2003 and reprinted in 2006, puts its elevations at 1,600 to 1,800 feet. On one side lies the Kittatinny Valley, whose floor the circular puts at about 400 to 600 feet; on the other is the upper Delaware River Valley above the Delaware Water Gap, at about 300 to 600 feet. High Point, which the circular puts at 1,803 feet and calls the state's highest point, sits near the mountain's northern end. [@njgs-provinces]

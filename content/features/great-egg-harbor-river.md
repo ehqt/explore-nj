@@ -78,6 +78,9 @@ review:
     date: 2026-11-23
     by: Claude (separate verifier session)
     note: "Round 1: the shape rebuilds byte-for-byte from the seven TIGER 2025 polygons plus the buffered USGS NHD line, and the text says where it is a 100-meter band; Wild and Scenic mileages and segments match the 1992 law and rivers.gov; superlatives attributed. Fixed: Corbin City was missing from municipalities (the shape reaches Rock Point); three close paraphrases of the NPS page. Round 2: pass."
+  - stage: approved
+    date: 2026-11-23
+    by: Eric
 ---
 
 In the National Park Service's words, the Great Egg Harbor River starts "as a trickle near Berlin." From there it takes a 59-mile course to the southeast, ending at Great Egg Harbor and the Atlantic Ocean, and the Park Service counts 17 designated tributaries feeding it along the way, so the river broadens as it goes. Lake Lenape, at Mays Landing, exists because a dam blocks the river there. Below the dam, the Park Service says, the river's "cedar waters" start to mix with salt water carried in by the tides. [@nps-learn]

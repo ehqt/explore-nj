@@ -98,6 +98,10 @@ review:
     date: 2026-11-23
     by: Claude (separate verifier session)
     note: "Round 1: construction, teams, players and the February 25, 2013 landmark date match the nomination; both \"few remaining Negro League stadiums\" superlatives are attributed (Park Service and City of Paterson); the 1996 and 1997 closing years are each attributed; present-tense use rests on October 2026 and 2026-season pages; pin and photo confirmed. Fixed: \"later\" for Doby's semi-pro play was unsourced; three close paraphrases of the nomination and Park Service; hard_history set because the entry centers on segregation. Round 2: pass."
+  - stage: approved
+    date: 2026-11-23
+    by: Eric
+    note: "Approved without outside review; relies on the National Historic Landmark nomination, the National Park Service and the City of Paterson."
 ---
 
 Hinchliffe Stadium is an open-air concrete stadium on a hill above the Passaic River in Paterson, looking out over the Great Falls and the old mill district. The City of Paterson built it in 1931–32, during the Great Depression, paying with a bond issue and later some New Deal money. Its design, by John Shaw of the Paterson firm Fanning & Shaw, mixes Spanish Colonial Revival with Art Deco/Moderne and builds on a layout the Olmsted Brothers drew up for the site in 1931. [@nhl-nomination]
